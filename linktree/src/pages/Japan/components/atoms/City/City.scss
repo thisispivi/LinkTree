@@ -2,14 +2,14 @@
 @use "../../../../../styles/variables.scss" as v;
 
 .city {
-  $width: 12rem;
-  $height: 8rem;
+  $width: 10.8rem;
+  $height: 7.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 12.6rem;
-  height: 8.4rem;
+  width: 11.34rem;
+  height: 7.875rem;
   @include m.transition(all, 0.15s, ease-in-out);
 
   &:hover {
@@ -41,17 +41,5 @@
     background-size: cover;
     background-position: center;
     object-fit: cover;
-  }
-}
-
-.japan--dark {
-  .city {
-    background-color: v.$darkBackground;
-  }
-}
-
-.japan--light {
-  .city {
-    background-color: v.$lightBackground;
   }
 }

@@ -1,23 +1,48 @@
+@use "../../../../../styles/variables.scss" as v;
+
 .row-w-bar {
   display: flex;
-  height: 8.4rem;
-  width: calc(27rem);
+  height: 7.825rem;
+  width: 25rem;
   align-items: center;
-  padding-inline: 1rem;
   position: relative;
 
   .row-w-bar__content {
     position: absolute;
     display: flex;
     width: 100%;
-    justify-content: space-between;
     z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+    &.row-w-bar__content--2 {
+      justify-content: space-between;
+    }
   }
 
-  .row-w-bar__bar {
+  .row-w-bar__container {
+    opacity: 0.5;
+    z-index: -1;
     position: absolute;
-    height: 0.2rem;
     width: 100%;
-    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    .row-w-bar__bar {
+      height: 0.15rem;
+      width: 1.4rem;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.japan--dark {
+  .row-w-bar__bar {
+    background-color: v.$lightBackground;
+  }
+}
+
+.japan--light {
+  .row-w-bar__bar {
+    background-color: v.$darkBackground;
   }
 }

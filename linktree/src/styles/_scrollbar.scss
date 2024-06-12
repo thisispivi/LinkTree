@@ -28,18 +28,10 @@ $scrollbarSize: 0.4rem;
   }
 }
 
-.home--light {
-  #info-tab {
+.japan--light {
+  #japan-content {
     @include setScrollbar(
       v.$lightInfoTab,
-      v.$darkButton,
-      v.$darkInfoTab,
-      v.$darkLeftBar
-    );
-  }
-  #gallery {
-    @include setScrollbar(
-      v.$lightLeftBar,
       v.$darkButton,
       v.$darkInfoTab,
       v.$darkLeftBar
@@ -47,18 +39,10 @@ $scrollbarSize: 0.4rem;
   }
 }
 
-.home--dark {
-  #info-tab {
+.japan--dark {
+  #japan-content {
     @include setScrollbar(
       v.$darkInfoTab,
-      v.$lightButton,
-      v.$lightInfoTab,
-      v.$lightLeftBar
-    );
-  }
-  #gallery {
-    @include setScrollbar(
-      v.$darkLeftBar,
       v.$lightButton,
       v.$lightInfoTab,
       v.$lightLeftBar

@@ -10,8 +10,27 @@
   justify-content: center;
 
   .japan__content {
+    width: 100%;
+    border-right: 1rem solid v.$darkBackground;
+    height: calc(100% - 3rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-inline: auto;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
+    * {
+      flex-shrink: 0;
+    }
+    .japan__content__dates,
+    .japan__content__cities {
+      height: 104.2rem;
+      padding-bottom: 1rem;
+      width: auto;
+    }
+    .japan__content__dates {
+      margin-right: 1rem;
+    }
   }
 }
 
