@@ -20,5 +20,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         { path: "/Japan", element: <Japan /> },
       ])}
     />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
