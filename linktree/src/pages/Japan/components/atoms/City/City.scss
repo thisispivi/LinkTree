@@ -1,0 +1,57 @@
+@use "../../../../../styles/mixins.scss" as m;
+@use "../../../../../styles/variables.scss" as v;
+
+.city {
+  $width: 12rem;
+  $height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 12.6rem;
+  height: 8.4rem;
+  @include m.transition(all, 0.15s, ease-in-out);
+
+  &:hover {
+    margin: 0;
+    transform: scale(1.05);
+  }
+
+  .city__image,
+  .city__name__container {
+    position: absolute;
+    width: $width;
+    height: $height;
+    border-radius: 0.5rem;
+  }
+
+  .city__name__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    padding: 1rem;
+    .city__name {
+      color: white;
+    }
+  }
+
+  .city__image {
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+}
+
+.japan--dark {
+  .city {
+    background-color: v.$darkBackground;
+  }
+}
+
+.japan--light {
+  .city {
+    background-color: v.$lightBackground;
+  }
+}

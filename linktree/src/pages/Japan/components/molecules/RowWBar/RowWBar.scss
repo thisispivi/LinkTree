@@ -1,0 +1,23 @@
+.row-w-bar {
+  display: flex;
+  height: 8.4rem;
+  width: calc(27rem);
+  align-items: center;
+  padding-inline: 1rem;
+  position: relative;
+
+  .row-w-bar__content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  .row-w-bar__bar {
+    position: absolute;
+    height: 0.2rem;
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+}

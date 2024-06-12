@@ -1,0 +1,14 @@
+.dates {
+  $width: 10rem;
+  $height: 8rem;
+  display: flex;
+  flex-direction: column;
+  width: $width;
+  height: $height;
+  margin: 0.2rem 0.3rem;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 1.1rem;
+  }
+}
