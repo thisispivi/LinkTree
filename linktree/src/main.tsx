@@ -7,6 +7,7 @@ import "./styles/_mixins.scss";
 import "./styles/_scrollbar.scss";
 import "./i18n/i18n";
 import { RouterProvider, createHashRouter } from "react-router-dom";
+import Japan from "./pages/Japan/Japan";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -15,9 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         {
           path: "/",
           element: <div />,
-          children: [{ path: "japan", element: <div /> }],
         },
+        { path: "/Japan", element: <Japan /> },
       ])}
     />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

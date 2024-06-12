@@ -1,0 +1,19 @@
+@use "../../styles/variables" as v;
+
+.japan {
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.japan--dark {
+  background-color: v.$darkBackground;
+  color: v.$lightBackground;
+}
+
+.japan--light {
+  background-color: v.$lightBackground;
+  color: v.$darkBackground;
+}
