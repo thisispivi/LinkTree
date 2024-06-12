@@ -11,8 +11,7 @@
 
   .japan__content {
     width: 100%;
-    border-right: 1rem solid v.$darkBackground;
-    height: calc(100% - 3rem);
+    height: calc(100% - 5.5rem);
     overflow-x: hidden;
     overflow-y: auto;
     margin-inline: auto;
@@ -37,9 +36,11 @@
 .japan--dark {
   background-color: v.$darkBackground;
   color: v.$lightBackground;
+  border-right: 1rem solid v.$darkBackground;
 }
 
 .japan--light {
   background-color: v.$lightBackground;
   color: v.$darkBackground;
+  border-right: 1rem solid v.$lightBackground;
 }

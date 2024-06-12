@@ -5,3 +5,17 @@
   -o-transition: $property $duration $timing;
   -ms-transition: $property $duration $timing;
 }
+
+@mixin set-button-colors($button, $buttonContent, $buttonHover) {
+  background-color: $button;
+  color: $buttonContent;
+  &:hover {
+    background-color: $buttonHover;
+  }
+  svg {
+    fill: $buttonContent;
+    .language-0 {
+      fill: $buttonContent;
+    }
+  }
+}

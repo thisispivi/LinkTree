@@ -1,0 +1,43 @@
+@use "../../../../../styles/variables" as v;
+
+.navbar {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
+
+  .dark-mode-button,
+  .button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navbar__right,
+  .navbar__left {
+    display: flex;
+    .dark-mode-button {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.home--light {
+  .navbar {
+    background-color: v.$lightLeftBar;
+    color: v.$darkLeftBar;
+  }
+}
+
+.home--dark {
+  .navbar {
+    background-color: v.$darkLeftBar;
+    color: v.$lightLeftBar;
+  }
+}

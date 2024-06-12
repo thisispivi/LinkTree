@@ -2,10 +2,11 @@ import useThemeDetector from "../../hooks/style/theme";
 import "./Japan.scss";
 import { Bar, City, Dates } from "./components/atoms";
 import { Column, RowWBar } from "./components/molecules";
+import { Navbar } from "./components/organisms";
 
 export default function Japan() {
-  const { isDarkTheme } = useThemeDetector();
-
+  const darkThemeData = useThemeDetector();
+  const { isDarkTheme } = darkThemeData;
   return (
     <div className={`japan ${isDarkTheme ? "japan--dark" : "japan--light"}`}>
       <div className="japan__content" id="japan-content">
@@ -133,6 +134,7 @@ export default function Japan() {
           />
         </Column>
       </div>
+      <Navbar darkThemeData={darkThemeData} />
     </div>
   );
 }
