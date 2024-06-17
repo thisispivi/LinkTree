@@ -1,7 +1,7 @@
 @use "../../../../../styles/variables" as v;
 
 .navbar {
-  height: 4rem;
+  height: 64px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -9,33 +9,43 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 1em;
   align-items: center;
   box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
 
+  * {
+    font-size: 16px;
+  }
+
   .dark-mode-button,
   .button {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.5em;
+    height: 2.5em;
   }
 
   .navbar__right,
   .navbar__left {
     display: flex;
     .dark-mode-button {
-      margin-left: 0.5rem;
+      margin-left: 0.5em;
+    }
+  }
+
+  .navbar__left {
+    .shopping-button {
+      margin-inline: 0.5rem;
     }
   }
 }
 
-.home--light {
+.japan--light {
   .navbar {
     background-color: v.$lightLeftBar;
     color: v.$darkLeftBar;
   }
 }
 
-.home--dark {
+.japan--dark {
   .navbar {
     background-color: v.$darkLeftBar;
     color: v.$lightLeftBar;

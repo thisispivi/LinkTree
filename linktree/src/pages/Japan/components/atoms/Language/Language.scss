@@ -11,9 +11,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 0.5rem;
-    width: 4.1rem !important;
-    border-radius: 3rem !important;
+    padding: 0.5em;
+    width: 4.1em !important;
+    border-radius: 3em !important;
 
     .language-selector__language-icon,
     .language-selector__language-flag-icon {
@@ -23,12 +23,12 @@
 
     .language-selector__language-icon {
       margin-left: auto;
-      width: 1.3rem;
+      width: 1.3em;
     }
 
     .language-selector__language-flag-icon {
       margin-top: auto;
-      width: 1.4rem;
+      width: 1.4em;
     }
   }
   .language-selector__button,
@@ -58,15 +58,15 @@
   }
 
   .language-selector__button--it {
-    transform: translateX(5rem) scale(0.6);
+    transform: translateX(5em) scale(0.6);
     &.language-selector__button--open {
-      transform: translateX(-1rem);
+      transform: translateX(-1em);
     }
   }
   .language-selector__button--en {
-    transform: translateX(2.5rem) scale(0.6);
+    transform: translateX(2.5em) scale(0.6);
     &.language-selector__button--open {
-      transform: translateX(-0.5rem);
+      transform: translateX(-0.5em);
     }
   }
 }

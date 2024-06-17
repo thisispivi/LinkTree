@@ -11,7 +11,7 @@
 
   .japan__content {
     width: 100%;
-    height: calc(100% - 5.5rem);
+    height: calc(100% - 1rem - 64px);
     overflow-x: hidden;
     overflow-y: auto;
     margin-inline: auto;
@@ -23,7 +23,7 @@
     }
     .japan__content__dates,
     .japan__content__cities {
-      height: 104.2rem;
+      height: 102.2rem;
       padding-bottom: 1rem;
       width: auto;
     }

@@ -1,4 +1,10 @@
-import { DarkModeButton, LanguageSelctor } from "../../atoms";
+import {
+  DarkModeButton,
+  DocumentsButton,
+  LanguageSelctor,
+  LinkButton,
+  ShoppingButton,
+} from "../../atoms";
 import "./Navbar.scss";
 
 interface NavbarProps {
@@ -11,7 +17,11 @@ interface NavbarProps {
 export default function Navbar({ darkThemeData }: NavbarProps) {
   return (
     <div className="navbar">
-      <div className="navbar__left" />
+      <div className="navbar__left">
+        <LinkButton />
+        <ShoppingButton />
+        <DocumentsButton />
+      </div>
       <div className="navbar__right">
         <LanguageSelctor />
         <DarkModeButton {...darkThemeData} />

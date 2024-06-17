@@ -1,0 +1,22 @@
+@use "../../../../../styles/variables" as v;
+@use "../../../../../styles/mixins" as m;
+
+.japan--light {
+  .shopping-button {
+    @include m.set-button-colors(
+      v.$lightButton,
+      v.$lightButtonContent,
+      v.$lightButtonHover
+    );
+  }
+}
+
+.japan--dark {
+  .shopping-button {
+    @include m.set-button-colors(
+      v.$darkButton,
+      v.$darkButtonContent,
+      v.$darkButtonHover
+    );
+  }
+}
