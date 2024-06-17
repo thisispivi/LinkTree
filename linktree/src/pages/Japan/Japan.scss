@@ -9,13 +9,18 @@
   display: flex;
   justify-content: center;
 
+  .top-bar {
+    position: fixed;
+    height: 64px;
+  }
+
   .japan__content {
     width: 100%;
-    height: calc(100% - 1rem - 64px);
+    height: calc(100% - 1rem - 128px);
     overflow-x: hidden;
     overflow-y: auto;
     margin-inline: auto;
-    margin-top: 1rem;
+    margin-top: calc(1rem + 64px);
     display: flex;
     justify-content: center;
     * {

@@ -5,24 +5,24 @@ import {
   LinkButton,
   ShoppingButton,
 } from "../../atoms";
-import "./Navbar.scss";
+import "./BottomBar.scss";
 
-interface NavbarProps {
+interface BottomBarProps {
   darkThemeData: {
     isDarkTheme: boolean;
     handleDarkModeSwitch: () => void;
   };
 }
 
-export default function Navbar({ darkThemeData }: NavbarProps) {
+export default function BottomBar({ darkThemeData }: BottomBarProps) {
   return (
-    <div className="navbar">
-      <div className="navbar__left">
+    <div className="bottom-bar">
+      <div className="bottom-bar__left">
         <LinkButton />
         <ShoppingButton />
         <DocumentsButton />
       </div>
-      <div className="navbar__right">
+      <div className="bottom-bar__right">
         <LanguageSelctor />
         <DarkModeButton {...darkThemeData} />
       </div>

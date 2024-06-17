@@ -1,65 +1,65 @@
-<svg width="252" height="252" viewBox="0 0 252 252" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<circle class="logo-0" cx="84" cy="31" r="17.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="167" cy="31" r="17.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="201" cy="56" r="15.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="52" cy="56" r="15.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="225" cy="91" r="18.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="95" cy="78" r="18.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="79" cy="126" r="18.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="27" cy="91" r="18.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="173" cy="126" r="18.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="127" cy="120" r="20.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="21" cy="165" r="12.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="231" cy="165" r="12.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="151.5" cy="164.5" r="15" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="99.5" cy="162.5" r="15" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="14.5" cy="132.5" r="12" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="237.5" cy="135.5" r="12" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="207" cy="143" r="9.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="171" cy="205" r="9.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="80" cy="205" r="9.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="46" cy="145" r="9.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="70" cy="163" r="7.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="39" cy="122" r="7.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="182" cy="160" r="7.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="192" cy="96" r="7.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="62" cy="94" r="7.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="214.5" cy="119.5" r="6" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="47.5" cy="196.5" r="18" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="206.5" cy="195.5" r="18" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="157" cy="78" r="18.5" stroke="black" stroke-width="5" />
-	<circle class="logo-0" cx="126" cy="21" r="18.5" stroke="black" stroke-width="5" />
-	<path class="logo-0" d="M126 142L126 247" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-1"
-		d="M112 241C116.4 238.2 116.833 204.5 116.5 188H136.5C136 200.333 135.7 227.2 138.5 236C141.3 244.8 158.667 249.667 167 251C132.833 251.333 67.9 251.8 81.5 251C98.5 250 106.5 244.5 112 241Z"
+<svg width="252" height="270" viewBox="0 0 252 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="84" cy="31" r="17.5" stroke="black" stroke-width="5" />
+	<circle cx="167" cy="31" r="17.5" stroke="black" stroke-width="5" />
+	<circle cx="201" cy="56" r="15.5" stroke="black" stroke-width="5" />
+	<circle cx="52" cy="56" r="15.5" stroke="black" stroke-width="5" />
+	<circle cx="225" cy="91" r="18.5" stroke="black" stroke-width="5" />
+	<circle cx="95" cy="78" r="18.5" stroke="black" stroke-width="5" />
+	<circle cx="79" cy="126" r="18.5" stroke="black" stroke-width="5" />
+	<circle cx="27" cy="91" r="18.5" stroke="black" stroke-width="5" />
+	<circle cx="173" cy="126" r="18.5" stroke="black" stroke-width="5" />
+	<circle cx="127" cy="120" r="20.5" stroke="black" stroke-width="5" />
+	<circle cx="21" cy="165" r="12.5" stroke="black" stroke-width="5" />
+	<circle cx="231" cy="165" r="12.5" stroke="black" stroke-width="5" />
+	<circle cx="151.5" cy="164.5" r="15" stroke="black" stroke-width="5" />
+	<circle cx="99.5" cy="162.5" r="15" stroke="black" stroke-width="5" />
+	<circle cx="14.5" cy="132.5" r="12" stroke="black" stroke-width="5" />
+	<circle cx="237.5" cy="135.5" r="12" stroke="black" stroke-width="5" />
+	<circle cx="207" cy="143" r="9.5" stroke="black" stroke-width="5" />
+	<circle cx="171" cy="205" r="9.5" stroke="black" stroke-width="5" />
+	<circle cx="80" cy="205" r="9.5" stroke="black" stroke-width="5" />
+	<circle cx="46" cy="145" r="9.5" stroke="black" stroke-width="5" />
+	<circle cx="70" cy="163" r="7.5" stroke="black" stroke-width="5" />
+	<circle cx="39" cy="122" r="7.5" stroke="black" stroke-width="5" />
+	<circle cx="182" cy="160" r="7.5" stroke="black" stroke-width="5" />
+	<circle cx="192" cy="96" r="7.5" stroke="black" stroke-width="5" />
+	<circle cx="62" cy="94" r="7.5" stroke="black" stroke-width="5" />
+	<circle cx="214.5" cy="119.5" r="6" stroke="black" stroke-width="5" />
+	<circle cx="43.5" cy="195.5" r="18" stroke="black" stroke-width="5" />
+	<circle cx="208.5" cy="194.5" r="18" stroke="black" stroke-width="5" />
+	<circle cx="157" cy="78" r="18.5" stroke="black" stroke-width="5" />
+	<circle cx="126" cy="21" r="18.5" stroke="black" stroke-width="5" />
+	<path d="M126 142L126 247" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path class="fill"
+		d="M112.217 256.504C116.6 252.885 117.031 209.327 116.699 188H136.62C136.122 203.941 135.824 238.667 138.612 250.041C141.401 261.415 158.7 267.706 167 269.429C132.968 269.86 68.291 270.463 81.8374 269.429C98.7703 268.137 106.739 261.028 112.217 256.504Z"
 		fill="black" />
-	<path class="logo-0" d="M126 40V96" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M99 43L126 60" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M152 43L126 60" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M62 69L75 82" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M109 107L101 96" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M175 84L192 69" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M127 192L143 178" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M145 105L151 96" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M128 208L163 178" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M164 178L206 177" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M176 177L178 167" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M189 176L201 167" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M204 153L201 167" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M217 169L201 167" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M208 121H192" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M210 103L192 121" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M161 142L157 149" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M188 195H144" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M126 195H67" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M126 195L110 175" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M111 195L87 178" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M65 178L51 168" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M51 168L48 155" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M51 168L34 169" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M60 122L48 122" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M60 122L42 104" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M93 147L90 142" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M49 178H86" stroke="black" stroke-width="6" stroke-linecap="round" />
-	<path class="logo-0" d="M75 170L86 178" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M126 40V96" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M99 43L126 60" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M152 43L126 60" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M62 69L76 81" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M109 107L101 96" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M175 84L192 69" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M127 192L143 178" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M145 105L151 96" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M128 208L163 178" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M164 178L195 181" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M176 177L178 167" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M188 179L201 167" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M204 153L201 167" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M217 169L201 167" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M208 121H192" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M210 103L192 121" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M161 142L157 149" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M188 195H144" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M126 195H63" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M126 195L110 175" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M111 195L87 178" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M67 179L51 168" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M51 168L48 155" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M51 168L34 169" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M60 122L48 122" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M60 122L42 104" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M93 147L90 142" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M56 181L86 178" stroke="black" stroke-width="6" stroke-linecap="round" />
+	<path d="M75 170L86 178" stroke="black" stroke-width="6" stroke-linecap="round" />
 </svg>

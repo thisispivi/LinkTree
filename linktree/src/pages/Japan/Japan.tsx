@@ -1,16 +1,20 @@
+import useLanguage from "../../hooks/language/language";
 import useThemeDetector from "../../hooks/style/theme";
 import "./Japan.scss";
 import { Bar, City, Dates } from "./components/atoms";
 import { Column, RowWBar } from "./components/molecules";
-import { Navbar } from "./components/organisms";
+import { BottomBar, TopBar } from "./components/organisms";
 import { cities, dates } from "./utils/data";
 
 export default function Japan() {
+  const { t } = useLanguage(["japan"]);
   const darkThemeData = useThemeDetector();
   const { isDarkTheme } = darkThemeData;
+  document.title = `${t("title")} 🇯🇵`;
 
   return (
     <div className={`japan ${isDarkTheme ? "japan--dark" : "japan--light"}`}>
+      <TopBar />
       <div className="japan__content" id="japan-content">
         <Column className="japan__content__dates">
           {dates.map((date, index) => (
@@ -51,7 +55,7 @@ export default function Japan() {
           ))}
         </Column>
       </div>
-      <Navbar darkThemeData={darkThemeData} />
+      <BottomBar darkThemeData={darkThemeData} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 @use "../../../../../styles/variables" as v;
 
-.navbar {
+.bottom-bar {
   height: 64px;
   width: 100%;
   position: fixed;
@@ -23,15 +23,15 @@
     height: 2.5em;
   }
 
-  .navbar__right,
-  .navbar__left {
+  .bottom-bar__right,
+  .bottom-bar__left {
     display: flex;
     .dark-mode-button {
       margin-left: 0.5em;
     }
   }
 
-  .navbar__left {
+  .bottom-bar__left {
     .shopping-button {
       margin-inline: 0.5rem;
     }
@@ -39,14 +39,14 @@
 }
 
 .japan--light {
-  .navbar {
+  .bottom-bar {
     background-color: v.$lightLeftBar;
     color: v.$darkLeftBar;
   }
 }
 
 .japan--dark {
-  .navbar {
+  .bottom-bar {
     background-color: v.$darkLeftBar;
     color: v.$lightLeftBar;
   }
