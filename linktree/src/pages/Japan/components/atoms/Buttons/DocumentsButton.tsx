@@ -29,7 +29,7 @@ export default function DocumentsButton({
     (() =>
       window.open(
         "https://iampivi.notion.site/Documenti-b76ab0da63eb48f38813811c55a708e9?pvs=4",
-        "_blank"
+        "_blank",
       ));
 
   return (

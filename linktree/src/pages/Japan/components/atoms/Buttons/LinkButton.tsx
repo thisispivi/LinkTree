@@ -29,7 +29,7 @@ export default function LinkButton({
     (() =>
       window.open(
         "https://iampivi.notion.site/Link-Utili-ce5b73a593d9492ebd837de99d7b57b5?pvs=4",
-        "_blank"
+        "_blank",
       ));
 
   return (

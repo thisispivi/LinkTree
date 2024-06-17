@@ -30,7 +30,7 @@ export default function ShoppingButton({
     (() =>
       window.open(
         "https://iampivi.notion.site/Cose-da-portare-4b3d0412a42247e2adfeed0d4848e234?pvs=4",
-        "_blank"
+        "_blank",
       ));
 
   return (
