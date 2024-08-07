@@ -30,7 +30,7 @@ export default function FoodButton({
     (() =>
       window.open(
         "https://iampivi.notion.site/Food-b76ab0da63eb48f38813811c55a708e9",
-        "_blank"
+        "_blank",
       ));
 
   return (

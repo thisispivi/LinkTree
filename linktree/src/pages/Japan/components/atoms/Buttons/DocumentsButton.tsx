@@ -29,7 +29,7 @@ export default function DocumentsButton({
     (() =>
       window.open(
         "https://drive.google.com/drive/folders/1mVqrK9Cjvw4f0YM33ZkpLfciz32qySil",
-        "_blank"
+        "_blank",
       ));
 
   return (
