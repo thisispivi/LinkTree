@@ -1,4 +1,5 @@
 import DocumentIcon from "./icons/Document.svg?react";
+import FoodIcon from "./icons/Food.svg?react";
 import LanguageIcon from "./icons/Language.svg?react";
 import LinkIcon from "./icons/Link.svg?react";
 import LogoIcon from "./icons/Logo.svg?react";
@@ -8,6 +9,7 @@ import SunIcon from "./icons/Sun.svg?react";
 
 export {
   DocumentIcon,
+  FoodIcon,
   LanguageIcon,
   LinkIcon,
   LogoIcon,

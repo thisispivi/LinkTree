@@ -1,9 +1,9 @@
 import {
   DarkModeButton,
   DocumentsButton,
-  LanguageSelctor,
+  FoodButton,
+  LanguageSelector,
   LinkButton,
-  ShoppingButton,
 } from "../../atoms";
 import "./BottomBar.scss";
 
@@ -19,11 +19,11 @@ export default function BottomBar({ darkThemeData }: BottomBarProps) {
     <div className="bottom-bar">
       <div className="bottom-bar__left">
         <LinkButton />
-        <ShoppingButton />
+        <FoodButton />
         <DocumentsButton />
       </div>
       <div className="bottom-bar__right">
-        <LanguageSelctor />
+        <LanguageSelector />
         <DarkModeButton {...darkThemeData} />
       </div>
     </div>

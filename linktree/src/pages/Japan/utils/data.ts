@@ -21,14 +21,14 @@ export const cities = [
     },
     {
       name: "kanazawa",
-      url: "https://wanderlog.com/view/ncpiazitzx/trip-to-kanazawa/shared",
+      url: "https://wanderlog.com/plan/svatwvdypelauxiu/trip-to-kanazawa/shared",
       imageUrl: "/LinkTree/Japan/Kanazawa.jpg",
     },
   ],
   [
     {
       name: "kanazawa",
-      url: "https://wanderlog.com/view/ncpiazitzx/trip-to-kanazawa/shared",
+      url: "https://wanderlog.com/plan/svatwvdypelauxiu/trip-to-kanazawa/shared",
       imageUrl: "/LinkTree/Japan/Kanazawa.jpg",
     },
   ],
@@ -37,6 +37,18 @@ export const cities = [
       name: "kyoto",
       url: "https://wanderlog.com/plan/igzciyjgbwydijwd/trip-to-kyoto/shared",
       imageUrl: "/LinkTree/Japan/Kyoto.jpg",
+    },
+  ],
+  [
+    {
+      name: "himeji",
+      url: "https://wanderlog.com/plan/hryobcskwvgzkdss/trip-to-kobe/shared",
+      imageUrl: "/LinkTree/Japan/Himeji.jpg",
+    },
+    {
+      name: "osaka",
+      url: undefined,
+      imageUrl: "/LinkTree/Japan/Osaka.png",
     },
   ],
   [
@@ -67,25 +79,16 @@ export const dates = [
     startDate: "2024/08/13",
     endDate: "2024/08/17",
   },
-  {
-    startDate: "2024/08/18",
-  },
-  {
-    startDate: "2024/08/19",
-  },
-  {
-    startDate: "2024/08/20",
-  },
+  { startDate: "2024/08/18" },
+  { startDate: "2024/08/19" },
+  { startDate: "2024/08/20" },
   {
     startDate: "2024/08/21",
-    endDate: "2024/08/23",
+    endDate: "2024/08/22",
   },
-  {
-    startDate: "2024/08/24",
-  },
-  {
-    startDate: "2024/08/25",
-  },
+  { startDate: "2024/08/23" },
+  { startDate: "2024/08/24" },
+  { startDate: "2024/08/25" },
   {
     startDate: "2024/08/26",
     endDate: "2024/08/27",

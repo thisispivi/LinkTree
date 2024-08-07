@@ -28,8 +28,8 @@ export default function DocumentsButton({
     onClick ||
     (() =>
       window.open(
-        "https://iampivi.notion.site/Documenti-b76ab0da63eb48f38813811c55a708e9?pvs=4",
-        "_blank",
+        "https://drive.google.com/drive/folders/1mVqrK9Cjvw4f0YM33ZkpLfciz32qySil",
+        "_blank"
       ));
 
   return (

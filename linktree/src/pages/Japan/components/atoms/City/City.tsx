@@ -3,7 +3,7 @@ import "./City.scss";
 
 interface CityProps {
   name: string;
-  url: string;
+  url?: string;
   imageUrl: string;
 }
 
