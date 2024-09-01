@@ -3,73 +3,73 @@ export const cities = [
     {
       name: "tokyo",
       url: "https://wanderlog.com/plan/vmaeszzkcbuzwffy/trip-to-tokyo/shared",
-      imageUrl: "/LinkTree/Japan/Tokyo.png",
+      imageUrl: "/Japan/Tokyo.png",
     },
   ],
   [
     {
       name: "takayama",
       url: "https://wanderlog.com/plan/gqwvpfdehqhasfqt/trip-to-takayama/shared",
-      imageUrl: "/LinkTree/Japan/Takayama.jpg",
+      imageUrl: "/Japan/Takayama.jpg",
     },
   ],
   [
     {
       name: "shirakawago",
       url: "https://wanderlog.com/plan/nolxufeklcxgovdv/trip-to-shirakawa/shared",
-      imageUrl: "/LinkTree/Japan/Shirakawago.jpg",
+      imageUrl: "/Japan/Shirakawago.jpg",
     },
     {
       name: "kanazawa",
       url: "https://wanderlog.com/plan/svatwvdypelauxiu/trip-to-kanazawa/shared",
-      imageUrl: "/LinkTree/Japan/Kanazawa.jpg",
+      imageUrl: "/Japan/Kanazawa.jpg",
     },
   ],
   [
     {
       name: "kanazawa",
       url: "https://wanderlog.com/plan/svatwvdypelauxiu/trip-to-kanazawa/shared",
-      imageUrl: "/LinkTree/Japan/Kanazawa.jpg",
+      imageUrl: "/Japan/Kanazawa.jpg",
     },
   ],
   [
     {
       name: "kyoto",
       url: "https://wanderlog.com/plan/igzciyjgbwydijwd/trip-to-kyoto/shared",
-      imageUrl: "/LinkTree/Japan/Kyoto.jpg",
+      imageUrl: "/Japan/Kyoto.jpg",
     },
   ],
   [
     {
       name: "himeji",
       url: "https://wanderlog.com/plan/hryobcskwvgzkdss/trip-to-kobe/shared",
-      imageUrl: "/LinkTree/Japan/Himeji.jpg",
+      imageUrl: "/Japan/Himeji.jpg",
     },
     {
       name: "osaka",
       url: undefined,
-      imageUrl: "/LinkTree/Japan/Osaka.png",
+      imageUrl: "/Japan/Osaka.png",
     },
   ],
   [
     {
       name: "nara",
       url: "https://wanderlog.com/plan/lyicjgzrparzaogt/trip-to-nara/shared",
-      imageUrl: "/LinkTree/Japan/Nara.jpg",
+      imageUrl: "/Japan/Nara.jpg",
     },
   ],
   [
     {
       name: "osaka",
       url: "https://wanderlog.com/plan/zjcyqouqcrsirrre/trip-to-osaka/shared",
-      imageUrl: "/LinkTree/Japan/Osaka.png",
+      imageUrl: "/Japan/Osaka.png",
     },
   ],
   [
     {
       name: "kyoto",
       url: "https://wanderlog.com/plan/igzciyjgbwydijwd/trip-to-kyoto/shared",
-      imageUrl: "/LinkTree/Japan/Kyoto.jpg",
+      imageUrl: "/Japan/Kyoto.jpg",
     },
   ],
 ];
