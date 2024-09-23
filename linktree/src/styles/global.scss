@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -23,7 +23,7 @@ body {
   border: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 #app {
