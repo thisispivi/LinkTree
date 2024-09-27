@@ -8,13 +8,21 @@ defineProps({
 });
 
 const containerRef = ref<HTMLElement | null>(null);
-const headerHeight = ref("12rem");
+const MIN_HEADER_HEIGHT = 8;
+const MAX_HEADER_HEIGHT = 16;
+const MIN_HEADER_PADDING = 1;
+const MAX_HEADER_PADDING = 2;
+const headerHeight = ref(`${MAX_HEADER_HEIGHT}rem`);
+const headerPadding = ref(`${MAX_HEADER_PADDING}rem`);
 
 function onScroll() {
   if (!containerRef.value) return;
 
   const scrollTop = containerRef.value.scrollTop;
-  headerHeight.value = scrollTop > 80 ? "5rem" : "12rem";
+  headerHeight.value =
+    scrollTop > 80 ? `${MIN_HEADER_HEIGHT}rem` : `${MAX_HEADER_HEIGHT}rem`;
+  headerPadding.value =
+    scrollTop > 80 ? `${MIN_HEADER_PADDING}rem` : `${MAX_HEADER_PADDING}rem`;
 }
 
 onMounted(() => {
@@ -35,7 +43,7 @@ watch(containerRef, (newValue, oldValue) => {
 
 <template>
   <div class="base">
-    <Header :style="{ height: headerHeight }" />
+    <Header :style="{ height: headerHeight, padding: headerPadding }" />
     <div
       class="container"
       ref="containerRef"
