@@ -22,21 +22,17 @@ defineProps({
 .links {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
   align-items: center;
+  padding-block: 1rem;
   .container {
-    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
     .links__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
   }
 }
