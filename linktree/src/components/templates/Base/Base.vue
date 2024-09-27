@@ -9,17 +9,22 @@ defineProps({
 
 const containerRef = ref<HTMLElement | null>(null);
 const MIN_HEADER_HEIGHT = 6;
-const MAX_HEADER_HEIGHT = 16;
+const MAX_HEADER_HEIGHT = 22;
 const headerHeight = ref(`${MAX_HEADER_HEIGHT}rem`);
 const headerClass = ref("header");
 
 function onScroll() {
   if (!containerRef.value) return;
-
-  const scrollTop = containerRef.value.scrollTop;
-  headerHeight.value =
-    scrollTop > 100 ? `${MIN_HEADER_HEIGHT}rem` : `${MAX_HEADER_HEIGHT}rem`;
-  headerClass.value = scrollTop > 100 ? "header header--scrolled" : "header";
+  const container = containerRef.value;
+  const isScrollable =
+    container.scrollHeight > container.clientHeight &&
+    container.scrollHeight - container.clientHeight > 6 * 16;
+  if (isScrollable) {
+    const scrollTop = container.scrollTop;
+    headerHeight.value =
+      scrollTop > 20 ? `${MIN_HEADER_HEIGHT}rem` : `${MAX_HEADER_HEIGHT}rem`;
+    headerClass.value = scrollTop > 20 ? "header header--scrolled" : "header";
+  }
 }
 
 onMounted(() => {

@@ -45,6 +45,7 @@ const shouldShowReadMore = computed(() => {
           </button>
         </span>
       </p>
+      <p>{{ $t(`links.${link.key}.description`) }}</p>
     </div>
   </div>
 </template>
