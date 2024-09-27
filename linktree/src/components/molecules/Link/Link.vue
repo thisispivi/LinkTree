@@ -60,8 +60,8 @@ const shouldShowReadMore = computed(() => {
   border-radius: $borderRadius;
   background-color: v.$backgroundDarkCard;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  @include m.transition(all, 0.2s);
   max-width: 25rem;
+  @include m.transition(all, 0.2s);
   &:hover {
     cursor: pointer;
     background-color: v.$backgroundDarkCardHover;

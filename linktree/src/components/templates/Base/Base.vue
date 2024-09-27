@@ -8,21 +8,18 @@ defineProps({
 });
 
 const containerRef = ref<HTMLElement | null>(null);
-const MIN_HEADER_HEIGHT = 8;
+const MIN_HEADER_HEIGHT = 6;
 const MAX_HEADER_HEIGHT = 16;
-const MIN_HEADER_PADDING = 1;
-const MAX_HEADER_PADDING = 2;
 const headerHeight = ref(`${MAX_HEADER_HEIGHT}rem`);
-const headerPadding = ref(`${MAX_HEADER_PADDING}rem`);
+const headerClass = ref("header");
 
 function onScroll() {
   if (!containerRef.value) return;
 
   const scrollTop = containerRef.value.scrollTop;
   headerHeight.value =
-    scrollTop > 80 ? `${MIN_HEADER_HEIGHT}rem` : `${MAX_HEADER_HEIGHT}rem`;
-  headerPadding.value =
-    scrollTop > 80 ? `${MIN_HEADER_PADDING}rem` : `${MAX_HEADER_PADDING}rem`;
+    scrollTop > 100 ? `${MIN_HEADER_HEIGHT}rem` : `${MAX_HEADER_HEIGHT}rem`;
+  headerClass.value = scrollTop > 100 ? "header header--scrolled" : "header";
 }
 
 onMounted(() => {
@@ -43,7 +40,7 @@ watch(containerRef, (newValue, oldValue) => {
 
 <template>
   <div class="base">
-    <Header :style="{ height: headerHeight, padding: headerPadding }" />
+    <Header :style="{ height: headerHeight }" :class="headerClass" />
     <div
       class="container"
       ref="containerRef"
@@ -67,6 +64,8 @@ watch(containerRef, (newValue, oldValue) => {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
   @include m.transition;
 }
 </style>

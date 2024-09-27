@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
 .profile {
-  height: 100%;
+  height: auto;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
