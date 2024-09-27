@@ -48,6 +48,7 @@ watch(containerRef, (newValue, oldValue) => {
 
 <style lang="scss" scoped>
 @use "../../../styles/variables.scss" as v;
+@use "../../../styles/mixins.scss" as m;
 .base {
   display: flex;
   height: 100%;
@@ -58,5 +59,6 @@ watch(containerRef, (newValue, oldValue) => {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  @include m.transition;
 }
 </style>
