@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--youtube" @click="openLink(URL)">
+  <Button class="btn btn--youtube" @click="openLink(youtubeUrl)">
     <YoutubeIcon />
   </Button>
 </template>
@@ -9,7 +9,7 @@ import { YoutubeIcon } from "../../../assets";
 import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
-const URL = "https://www.youtube.com/@andreapiras4885";
+const youtubeUrl = "https://www.youtube.com/@andreapiras4885";
 </script>
 
 <style lang="scss" scoped>

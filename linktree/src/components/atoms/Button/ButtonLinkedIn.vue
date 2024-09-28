@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--linkedin" @click="openLink(URL)">
+  <Button class="btn btn--linkedin" @click="openLink(linkedInUrl)">
     <LinkedInIcon />
   </Button>
 </template>
@@ -9,7 +9,7 @@ import { LinkedInIcon } from "../../../assets";
 import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
-const URL = "https://www.linkedin.com/in/andrea-piras-pivi";
+const linkedInUrl = "https://www.linkedin.com/in/andrea-piras-pivi";
 </script>
 
 <style lang="scss" scoped>

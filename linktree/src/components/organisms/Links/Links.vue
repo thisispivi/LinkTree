@@ -12,7 +12,7 @@ defineProps({
   <div class="links">
     <div class="container">
       <div class="links__list">
-        <Link v-for="link in links" :link="link" />
+        <Link v-for="link in links" :key="link.key" :link="link" />
       </div>
     </div>
   </div>

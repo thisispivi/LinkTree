@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--skype" @click="openLink(URL)">
+  <Button class="btn btn--skype" @click="openLink(skypeUrl)">
     <SkypeIcon />
   </Button>
 </template>
@@ -9,7 +9,7 @@ import { SkypeIcon } from "../../../assets";
 import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
-const URL = "https://join.skype.com/invite/ATdDavVvAdtT";
+const skypeUrl = "https://join.skype.com/invite/ATdDavVvAdtT";
 </script>
 
 <style lang="scss" scoped>

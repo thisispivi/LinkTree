@@ -3,7 +3,7 @@
     class="profile"
     src="https://pivi-travel-map.b-cdn.net/LinkTree/Images/Profile.jpg"
     alt="profile"
-  />
+  >
 </template>
 
 <style lang="scss" scoped>

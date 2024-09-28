@@ -23,7 +23,7 @@ const shouldShowReadMore = computed(() => {
 </script>
 
 <template>
-  <div class="link" v-on:click="openLink">
+  <div class="link" @click="openLink">
     <img :src="link.imageUrl" alt="image" class="image" />
     <div class="footer">
       <h3>{{ $t(`links.${link.key}.title`) }}</h3>

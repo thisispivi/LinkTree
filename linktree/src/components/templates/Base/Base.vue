@@ -47,8 +47,8 @@ watch(containerRef, (newValue, oldValue) => {
   <div class="base">
     <Header :style="{ height: headerHeight }" :class="headerClass" />
     <div
-      class="container"
       ref="containerRef"
+      class="container"
       :style="{ marginTop: headerHeight }"
     >
       <Links :links="links" />

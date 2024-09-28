@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--x" @click="openLink(URL)">
+  <Button class="btn btn--x" @click="openLink(xUrl)">
     <XIcon />
   </Button>
 </template>
@@ -9,7 +9,7 @@ import { XIcon } from "../../../assets";
 import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
-const URL = "https://x.com/ThisIsPivi";
+const xUrl = "https://x.com/ThisIsPivi";
 </script>
 
 <style lang="scss" scoped>

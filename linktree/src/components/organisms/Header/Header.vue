@@ -1,11 +1,16 @@
 <template>
-  <div id="navbar" class="header">
+  <div
+    id="navbar"
+    class="header"
+  >
     <div class="header__profile">
       <div class="header__profile__image">
         <Profile />
       </div>
       <div class="header__texts">
-        <h1 class="header__texts__name">Andrea Piras <i>(Pivi)</i></h1>
+        <h1 class="header__texts__name">
+          Andrea Piras <i>(Pivi)</i>
+        </h1>
         <p class="header__texts__description">
           Full Stack Developer and Machine Learning consultant
         </p>

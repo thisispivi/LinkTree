@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--instagram" @click="openLink(URL)">
+  <Button class="btn btn--instagram" @click="openLink(instagramUrl)">
     <InstagramIcon />
   </Button>
 </template>
@@ -9,7 +9,7 @@ import { InstagramIcon } from "../../../assets";
 import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
-const URL = "https://www.instagram.com/pi_waitforit_vi/";
+const instagramUrl = "https://www.instagram.com/pi_waitforit_vi/";
 </script>
 
 <style lang="scss" scoped>

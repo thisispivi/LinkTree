@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--facebook" @click="openLink(URL)">
+  <Button class="btn btn--facebook" @click="openLink(facebookUrl)">
     <FacebookIcon />
   </Button>
 </template>
@@ -9,7 +9,7 @@ import { FacebookIcon } from "../../../assets";
 import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
-const URL = "https://www.facebook.com/thisispivi/";
+const facebookUrl = "https://www.facebook.com/thisispivi/";
 </script>
 
 <style lang="scss" scoped>

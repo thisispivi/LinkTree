@@ -12,6 +12,7 @@ export default {
     disabled: { type: Boolean, default: false },
     buttonClass: { type: String, default: "btn" },
   },
+  emits: ["click"],
   methods: {
     onClick() {
       if (!this.disabled) {
