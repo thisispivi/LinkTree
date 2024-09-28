@@ -2,13 +2,16 @@
   "name": "linktree",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://thisispivi.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "prepare": "cd .. & husky install",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
