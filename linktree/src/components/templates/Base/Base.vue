@@ -63,14 +63,14 @@ watch(containerRef, (newValue, oldValue) => {
   display: flex;
   height: 100%;
   width: 100%;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  overflow-x: hidden;
-  width: 100%;
-  @include m.transition;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    @include m.transition;
+  }
 }
 </style>
