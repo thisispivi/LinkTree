@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
 import { Links } from "../../../data/links";
 import { Link } from "../../molecules";
 

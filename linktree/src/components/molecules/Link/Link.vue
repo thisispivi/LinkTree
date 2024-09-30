@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps, ref } from "vue";
+import { computed, ref } from "vue";
 import { Link } from "../../../data/links";
 import { useI18n } from "vue-i18n";
 

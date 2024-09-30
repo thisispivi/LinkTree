@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Links as LinkType } from "../../../data/links";
 import { Links, Header } from "../../organisms";
-import { defineProps, ref } from "vue";
+import { ref } from "vue";
 
 defineProps({
   links: { type: Array as () => LinkType, required: true },
