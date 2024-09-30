@@ -8,5 +8,10 @@
       "title": "Travel Map",
       "description": "Travel Map is my personal web app designed to help me track and relive my travel experiences. I can visualize all the places I've visited with interactive markers on a dynamic map. For each destination, I can browse through a collection of photos, capturing the highlights of my journey, all within the app."
     }
+  },
+  "readMore": "Read more",
+  "readLess": "Read less",
+  "header": {
+    "description": "Full Stack Developer and Machine Learning consultant"
   }
 }

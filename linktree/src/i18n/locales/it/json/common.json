@@ -8,5 +8,10 @@
       "title": "Travel Map",
       "description": "Travel Mapè la mia applicazione web personale progettata per aiutarmi a tracciare e rivivere le mie esperienze di viaggio. Posso visualizzare tutti i luoghi che ho visitato con marcatori interattivi su una mappa dinamica. Per ogni destinazione, posso sfogliare una raccolta di foto, catturando i momenti salienti del mio viaggio, tutto all'interno dell'app."
     }
+  },
+  "readMore": "Leggi di più",
+  "readLess": "Leggi meno",
+  "header": {
+    "description": "Sviluppatore Full Stack e consulente di Machine Learning"
   }
 }

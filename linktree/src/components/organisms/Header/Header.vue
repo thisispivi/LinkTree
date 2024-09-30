@@ -1,18 +1,13 @@
 <template>
-  <div
-    id="navbar"
-    class="header"
-  >
+  <div id="navbar" class="header">
     <div class="header__profile">
       <div class="header__profile__image">
         <Profile />
       </div>
       <div class="header__texts">
-        <h1 class="header__texts__name">
-          Andrea Piras <i>(Pivi)</i>
-        </h1>
+        <h1 class="header__texts__name">Andrea Piras <i>(Pivi)</i></h1>
         <p class="header__texts__description">
-          Full Stack Developer and Machine Learning consultant
+          {{ $t("header.description") }}
         </p>
       </div>
     </div>
@@ -54,18 +49,19 @@ import {
   width: 100%;
   z-index: 10;
   box-shadow:
-    rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    rgba(0, 0, 0, 0.3) 0px 1.1rem 2.3rem,
+    rgba(0, 0, 0, 0.22) 0px 1rem 0.75rem;
   padding: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   @include m.transition;
   .header__profile {
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     min-width: 0;
     min-height: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     justify-content: center;
     .header__profile__image {
       display: flex;
@@ -118,18 +114,23 @@ import {
       height: 2rem;
     }
   }
+}
 
-  &.header--scrolled {
-    height: v.$headerHeightScrolled;
-    padding: 0.5rem 2rem;
-    flex-direction: row;
+@media (max-width: 320px) {
+  .header {
+    padding: 1.5rem 2rem;
     .header__profile {
+      margin-bottom: 1rem;
       .header__texts {
-        display: none;
+        .header__texts__name {
+          font-size: 1.3rem !important;
+        }
+        .header__texts__description {
+          font-size: 0.9rem !important;
+        }
       }
     }
     .header__links {
-      gap: 0.25rem;
       .btn {
         height: 1.5rem;
       }

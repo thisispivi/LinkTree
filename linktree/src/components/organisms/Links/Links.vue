@@ -24,15 +24,22 @@ defineProps({
   flex-direction: column;
   align-items: center;
   padding-block: 1rem;
+  width: inherit;
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: inherit;
     .links__list {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem;
       justify-content: center;
+      width: 90%;
+      .link {
+        width: 100%;
+        max-width: 25rem;
+      }
     }
   }
 }
