@@ -17,12 +17,12 @@ const youtubeUrl = "https://www.youtube.com/@andreapiras4885";
 @use "../../../styles/mixins.scss" as m;
 .btn--youtube {
   svg {
-    fill: v.$color500;
+    fill: v.$color600;
     @include m.transition;
   }
   &:hover {
     svg {
-      fill: v.$color400;
+      fill: v.$color500;
     }
   }
 }

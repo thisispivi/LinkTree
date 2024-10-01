@@ -40,20 +40,14 @@ import {
 
 .header {
   display: flex;
-  position: fixed;
+  // position: fixed;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: v.$headerHeight;
-  background-color: v.$headerBackgroundDark;
   width: 100%;
   z-index: 10;
-  box-shadow:
-    rgba(0, 0, 0, 0.3) 0px 1.1rem 2.3rem,
-    rgba(0, 0, 0, 0.22) 0px 1rem 0.75rem;
-  padding: 2rem;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  padding: 1.5rem;
   @include m.transition;
   .header__profile {
     height: 100%;
@@ -96,11 +90,11 @@ import {
       }
       .header__texts__description {
         font-size: 1rem;
-        color: white;
-        opacity: 0.6;
+        color: rgb(224, 212, 252);
         font-weight: 300;
         text-align: center;
         margin: 0;
+        opacity: 0.9;
       }
     }
   }

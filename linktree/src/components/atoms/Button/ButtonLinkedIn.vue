@@ -17,12 +17,12 @@ const linkedInUrl = "https://www.linkedin.com/in/andrea-piras-pivi";
 @use "../../../styles/mixins.scss" as m;
 .btn--linkedin {
   svg {
-    fill: v.$color500;
+    fill: v.$color600;
     @include m.transition;
   }
   &:hover {
     svg {
-      fill: v.$color400;
+      fill: v.$color500;
     }
   }
 }

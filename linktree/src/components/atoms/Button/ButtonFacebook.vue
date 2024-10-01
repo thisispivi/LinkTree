@@ -17,12 +17,12 @@ const facebookUrl = "https://www.facebook.com/thisispivi/";
 @use "../../../styles/mixins.scss" as m;
 .btn--facebook {
   svg {
-    fill: v.$color500;
+    fill: v.$color600;
     @include m.transition;
   }
   &:hover {
     svg {
-      fill: v.$color400;
+      fill: v.$color500;
     }
   }
 }

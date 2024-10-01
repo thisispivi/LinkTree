@@ -22,7 +22,7 @@ defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 1rem;
+  padding-block: 1.5rem;
   width: inherit;
   .container {
     display: flex;

@@ -25,16 +25,20 @@ const headerClass = ref("header");
 @use "../../../styles/mixins.scss" as m;
 .base {
   display: flex;
-  height: 100%;
+  flex-direction: column;
   width: 100%;
+  overflow-y: auto;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 23, 45, 1) 0%,
+    rgba(77, 52, 131, 1) 100%
+  );
+  height: 100%;
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
-    overflow-x: hidden;
     width: 100%;
-    margin-top: v.$headerHeight;
     @include m.transition;
   }
 }

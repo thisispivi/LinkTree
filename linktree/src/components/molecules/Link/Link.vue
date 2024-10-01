@@ -50,19 +50,18 @@ const shouldShowReadMore = computed(() => {
 .link {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1.25rem;
   $borderRadius: 1rem;
   border-radius: $borderRadius;
-  border: 2px solid v.$backgroundDarkCard;
-  background-color: v.$backgroundDarkCard;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.063rem);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   margin-bottom: auto;
   @include m.transition(all, 0.4s);
 
   &:hover {
     cursor: pointer;
-    background-color: v.$backgroundDarkCardHover;
-    border: 2px solid v.$color500;
+    background-color: rgba(255, 255, 255, 0.17);
   }
 
   .image {
@@ -79,7 +78,7 @@ const shouldShowReadMore = computed(() => {
       margin: 0;
       margin-bottom: 0.5rem;
       font-size: 1.3rem;
-      color: v.$color500;
+      color: v.$color600;
     }
 
     .description {
@@ -113,7 +112,7 @@ const shouldShowReadMore = computed(() => {
       .read-more {
         display: inline-block;
         margin-top: 0.5rem;
-        color: v.$color400;
+        color: v.$color500;
         background: none;
         border: none;
         cursor: pointer;
@@ -124,7 +123,7 @@ const shouldShowReadMore = computed(() => {
         @include m.transition(color, 0.4s);
 
         &:hover {
-          color: v.$color200;
+          color: v.$color500;
         }
       }
     }

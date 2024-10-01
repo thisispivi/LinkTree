@@ -17,12 +17,12 @@ const instagramUrl = "https://www.instagram.com/pi_waitforit_vi/";
 @use "../../../styles/mixins.scss" as m;
 .btn--instagram {
   svg {
-    fill: v.$color500;
+    fill: v.$color600;
     @include m.transition;
   }
   &:hover {
     svg {
-      fill: v.$color400;
+      fill: v.$color500;
     }
   }
 }
