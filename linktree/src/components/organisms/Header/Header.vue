@@ -40,14 +40,13 @@ import {
 
 .header {
   display: flex;
-  // position: fixed;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: v.$headerHeight;
   width: 100%;
   z-index: 10;
-  padding: 1.5rem;
+  padding: 2rem;
   @include m.transition;
   .header__profile {
     height: 100%;

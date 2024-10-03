@@ -17,5 +17,8 @@ export {
   ButtonYoutube,
 };
 
+import Pill from "./Pill/Pill.vue";
+export { Pill };
+
 import Profile from "./Profile/Profile.vue";
 export { Profile };

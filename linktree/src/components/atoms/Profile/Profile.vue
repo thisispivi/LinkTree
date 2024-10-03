@@ -12,6 +12,5 @@
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  // border: 0.3rem solid white;
 }
 </style>

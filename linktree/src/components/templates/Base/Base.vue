@@ -28,11 +28,7 @@ const headerClass = ref("header");
   flex-direction: column;
   width: 100%;
   overflow-y: auto;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 23, 45, 1) 0%,
-    rgba(77, 52, 131, 1) 100%
-  );
+  background: linear-gradient(135deg, #00172d 0%, rgba(77, 52, 131, 1) 100%);
   height: 100%;
   .container {
     display: flex;

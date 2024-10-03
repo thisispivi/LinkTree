@@ -2,6 +2,8 @@
 import { computed, ref } from "vue";
 import { Link } from "../../../data/links";
 import { useI18n } from "vue-i18n";
+import { Pill } from "../../atoms";
+import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
 
 const { link } = defineProps({
   link: { type: Object as () => Link, required: true },
@@ -26,7 +28,15 @@ const shouldShowReadMore = computed(() => {
   <div class="link" @click="openLink">
     <img :src="link.imageUrl" alt="image" class="image" />
     <div class="footer">
-      <h3>{{ $t(`links.${link.key}.title`) }}</h3>
+      <div class="title__area">
+        <div class="title">
+          <h3>{{ $t(`links.${link.key}.title`) }}</h3>
+          <ButtonGithub v-if="link.githubUrl" :github-url="link.githubUrl" />
+        </div>
+        <Pill :color="link.pillColor"
+          ><p>{{ $t(`categories.${link.pillKey}`) }}</p></Pill
+        >
+      </div>
       <div class="description" :class="{ expanded: isExpanded }">
         <p>
           {{ $t(`links.${link.key}.description`) }}
@@ -74,11 +84,33 @@ const shouldShowReadMore = computed(() => {
     flex-direction: column;
     margin-top: 1rem;
 
-    h3 {
-      margin: 0;
+    .title__area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 0.5rem;
-      font-size: 1.3rem;
-      color: v.$color600;
+      .title {
+        display: flex;
+        align-items: center;
+        h3 {
+          margin: 0;
+          font-size: 1.3rem;
+          color: v.$color600;
+        }
+        .btn--github {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-left: 0.5rem;
+        }
+      }
+      .pill {
+        opacity: 0.8;
+        p {
+          margin: 0;
+          text-transform: uppercase;
+          line-height: 0.75rem;
+        }
+      }
     }
 
     .description {

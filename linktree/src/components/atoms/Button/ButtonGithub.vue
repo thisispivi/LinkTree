@@ -8,8 +8,11 @@
 import { GithubIcon } from "../../../assets";
 import { Button } from "../../atoms";
 
+const { githubUrl } = defineProps({
+  githubUrl: { type: String, default: "https://github.com/thisispivi" },
+});
+
 const openLink = (url: string) => window.open(url, "_blank");
-const githubUrl = "https://github.com/thisispivi";
 </script>
 
 <style lang="scss" scoped>
