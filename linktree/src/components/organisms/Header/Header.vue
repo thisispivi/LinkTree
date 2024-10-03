@@ -1,5 +1,6 @@
 <template>
   <div id="navbar" class="header">
+    <SelectLanguage />
     <div class="header__profile">
       <div class="header__profile__image">
         <Profile />
@@ -32,6 +33,7 @@ import {
   ButtonYoutube,
   Profile,
 } from "../../atoms";
+import { SelectLanguage } from "../../molecules";
 </script>
 
 <style lang="scss" scoped>
@@ -47,7 +49,22 @@ import {
   width: 100%;
   z-index: 10;
   padding: 2rem;
+  position: relative;
   @include m.transition;
+  .select-language {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
   .header__profile {
     height: 100%;
     display: flex;
