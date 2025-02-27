@@ -7,6 +7,10 @@
     "travelMap": {
       "title": "Travel Map",
       "description": "Travel Map è la mia applicazione web personale progettata per aiutarmi a tracciare e rivivere le mie esperienze di viaggio. Posso visualizzare tutti i luoghi che ho visitato con marcatori interattivi su una mappa dinamica. Per ogni destinazione, posso sfogliare una raccolta di foto, catturando i momenti salienti del mio viaggio, tutto all'interno dell'app."
+    },
+    "tennisdle": {
+      "title": "Tennisdle",
+      "description": "Tennisdle è una web app in cui bisogna indovinare il tennista ATP o la tennista WTA del giorno basandosi su indizi come età, altezza, titoli vinti (Grand Slam, Olimpiadi, Finals) e stile di gioco (mano dominante e tipo di rovescio)."
     }
   },
   "categories": {
