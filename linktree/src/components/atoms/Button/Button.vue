@@ -24,16 +24,21 @@ export default {
 </script>
 
 <style lang="scss">
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/mixins.scss" as m;
+
 .btn {
   background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5rem;
   padding: 0;
-  & > svg {
-    width: 100%;
-    height: 100%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  @include m.transition;
 }
 
 .btn:disabled {

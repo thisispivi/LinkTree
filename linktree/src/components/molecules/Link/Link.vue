@@ -19,9 +19,9 @@ const toggleExpand = () => {
 };
 
 const i18n = useI18n();
-const shouldShowReadMore = computed(() => {
-  return i18n.t(`links.${link.key}.description`).length > 100;
-});
+const shouldShowReadMore = computed(
+  () => i18n.t(`links.${link.key}.description`).length > 100
+);
 </script>
 
 <template>
