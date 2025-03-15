@@ -1,4 +1,4 @@
 import Header from "./Header/Header.vue";
-import Links from "./Links/Links.vue";
+import Projects from "./Projects/Projects.vue";
 
-export { Header, Links };
+export { Header, Projects };

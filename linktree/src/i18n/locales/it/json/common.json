@@ -1,24 +1,22 @@
 {
-  "links": {
+  "projects": {
     "syrto": {
       "title": "Syrto",
-      "description": "Syrto® Company Intelligence è una piattaforma basata sull'intelligenza artificiale progettata per identificare opportunità di business, gestire i rischi e prevedere le prestazioni di clienti e fornitori. Il software combina reti neurali e machine learning con competenze finanziarie, offrendo una soluzione completa per il processo decisionale. Semplificando l'accesso alle informazioni finanziarie, Syrto® consente agli utenti di prendere decisioni aziendali informate."
+      "description": "Syrto® è una piattaforma avanzata per individuare opportunità di business, gestire i rischi e prevedere le prestazioni di clienti e fornitori. Integra reti neurali e machine learning con competenze finanziarie, offrendo una soluzione completa per il decision-making."
     },
     "travelMap": {
       "title": "Travel Map",
-      "description": "Travel Map è la mia applicazione web personale progettata per aiutarmi a tracciare e rivivere le mie esperienze di viaggio. Posso visualizzare tutti i luoghi che ho visitato con marcatori interattivi su una mappa dinamica. Per ogni destinazione, posso sfogliare una raccolta di foto, catturando i momenti salienti del mio viaggio, tutto all'interno dell'app."
+      "description": "Travel Map è una web app pensata per tracciare e rivivere i miei viaggi. Permette di visualizzare su una mappa interattiva tutte le destinazioni visitate e di esplorare una raccolta di foto e video per ciascun luogo."
     },
     "tennisdle": {
       "title": "Tennisdle",
-      "description": "Tennisdle è una web app in cui bisogna indovinare il tennista ATP o la tennista WTA del giorno basandosi su indizi come età, altezza, titoli vinti (Grand Slam, Olimpiadi, Finals) e stile di gioco (mano dominante e tipo di rovescio)."
+      "description": "Tennisdle è una web app in cui si deve indovinare il tennista ATP o la tennista WTA del giorno basandosi su indizi come età, altezza, titoli vinti (Grand Slam, Olimpiadi, Finals) e stile di gioco (mano dominante e tipo di rovescio)."
     }
   },
   "categories": {
     "work": "Lavoro",
     "projects": "Progetti"
   },
-  "readMore": "Leggi di più",
-  "readLess": "Leggi meno",
   "header": {
     "description": "Sviluppatore Full Stack e consulente di Machine Learning"
   }

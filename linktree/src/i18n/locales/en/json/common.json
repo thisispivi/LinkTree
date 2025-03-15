@@ -1,25 +1,23 @@
 {
-  "links": {
+  "projects": {
     "syrto": {
       "title": "Syrto",
-      "description": "Syrto® Company Intelligence is an AI-driven platform designed to identify business opportunities, manage risks, and forecast the performance of clients and suppliers. The software combines Neural Networks and Machine Learning with financial expertise, offering a comprehensive solution for decision-making. By simplifying access to financial insights, Syrto® enables users to make informed business decisions."
+      "description": "Syrto® is an advanced platform for identifying business opportunities, managing risks, and predicting the performance of clients and suppliers. It integrates neural networks and machine learning with financial expertise, offering a comprehensive solution for decision-making."
     },
     "travelMap": {
       "title": "Travel Map",
-      "description": "Travel Map is my personal web app designed to help me track and relive my travel experiences. I can visualize all the places I've visited with interactive markers on a dynamic map. For each destination, I can browse through a collection of photos, capturing the highlights of my journey, all within the app."
+      "description": "Travel Map is a web app designed to track and relive my travels. It allows users to visualize all visited destinations on an interactive map and explore a collection of photos and videos for each place."
     },
     "tennisdle": {
       "title": "Tennisdle",
-      "description": "Tennisdle is a web app where players must guess the daily ATP or WTA tennis player based on clues such as age, height, titles won (Grand Slams, Olympics, Finals), and playing style (dominant hand and backhand type)."
+      "description": "Tennisdle is a web app where players must guess the daily ATP or WTA tennis player based on hints such as age, height, titles won (Grand Slams, Olympics, Finals), and playing style (dominant hand and backhand type)."
     }
   },
   "categories": {
     "work": "Work",
     "projects": "Projects"
   },
-  "readMore": "Read more",
-  "readLess": "Read less",
   "header": {
-    "description": "Full Stack Developer and Machine Learning consultant"
+    "description": "Full Stack Developer and Machine Learning Consultant"
   }
 }

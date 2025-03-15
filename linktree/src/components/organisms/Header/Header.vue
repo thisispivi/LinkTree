@@ -48,9 +48,10 @@ import { SelectLanguage } from "../../molecules";
   padding: 2rem;
   position: relative;
   @include m.transition;
+  margin-bottom: 1rem;
   .header__profile {
     height: 100%;
-    margin: 3rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;

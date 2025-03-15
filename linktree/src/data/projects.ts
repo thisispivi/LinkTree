@@ -1,4 +1,4 @@
-export interface Link {
+export interface Project {
   url: string;
   imageUrl: string;
   key: string;
@@ -7,9 +7,9 @@ export interface Link {
   githubUrl?: string;
 }
 
-export type Links = Link[];
+export type Projects = Project[];
 
-export const links: Link[] = [
+export const projects: Project[] = [
   {
     url: "https://app.syrto.ai/",
     imageUrl:

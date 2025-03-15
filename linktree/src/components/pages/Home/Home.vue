@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { projects } from "../../../data/projects";
 import { Base } from "../../templates";
 </script>
 
@@ -6,7 +7,7 @@ import { Base } from "../../templates";
   <div class="home">
     <div class="background-gradient-1" />
     <div class="background-gradient-2" />
-    <Base />
+    <Base :projects="projects" />
   </div>
 </template>
 
