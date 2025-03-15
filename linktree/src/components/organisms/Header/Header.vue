@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import {
+  ButtonGithub,
+  ButtonInstagram,
+  ButtonLinkedIn,
+  ButtonSkype,
+  ButtonX,
+  ButtonYoutube,
+  Profile,
+} from "../../atoms";
+import { SelectLanguage } from "../../molecules";
+</script>
+
 <template>
   <div id="navbar" class="header">
     <SelectLanguage />
@@ -22,19 +35,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import {
-  ButtonGithub,
-  ButtonInstagram,
-  ButtonLinkedIn,
-  ButtonSkype,
-  ButtonX,
-  ButtonYoutube,
-  Profile,
-} from "../../atoms";
-import { SelectLanguage } from "../../molecules";
-</script>
 
 <style lang="scss" scoped>
 @use "../../../styles/variables.scss" as v;
