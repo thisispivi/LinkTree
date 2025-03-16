@@ -9,6 +9,24 @@ import {
   Profile,
 } from "../../atoms";
 import { SelectLanguage } from "../../molecules";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const element = document.querySelector(".rotating-btn") as HTMLElement | null;
+  if (element) {
+    let angle = 0;
+    const rotate = () => {
+      angle = (angle + 3) % 360;
+      element.style.setProperty("--angle", `${angle}deg`);
+      requestAnimationFrame(rotate);
+    };
+
+    rotate();
+  }
+});
+
+const onClick = () => {
+  window.open("mailto:andreapiras2809@gmail.com");
+};
 </script>
 
 <template>
@@ -31,6 +49,9 @@ import { SelectLanguage } from "../../molecules";
       <ButtonX />
       <ButtonYoutube />
     </div>
+    <button class="rotating-btn" @click="onClick">
+      <h3>{{ $t("contactMe") }}</h3>
+    </button>
   </div>
 </template>
 
@@ -94,6 +115,55 @@ import { SelectLanguage } from "../../molecules";
     .btn {
       height: 2.25rem;
       width: 2.25rem;
+    }
+  }
+
+  .rotating-btn {
+    width: auto;
+    height: 3rem;
+    border-radius: 3rem;
+    outline: none;
+    background: v.$background;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding-inline: 2rem;
+    margin-top: 1.5rem;
+    background:
+      linear-gradient(v.$background, v.$background) padding-box,
+      conic-gradient(
+          from var(--angle, 0),
+          transparent,
+          white 10%,
+          transparent 20%
+        )
+        border-box;
+    @include m.transition(all, 0.2s, ease-in-out);
+
+    &:hover {
+      background:
+        linear-gradient(v.$background, v.$background) padding-box,
+        conic-gradient(
+            from var(--angle, 0),
+            transparent,
+            v.$pink 10%,
+            v.$orange 5%,
+            transparent 20%
+          )
+          border-box;
+      filter: brightness(1.4);
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: v.$lightPurple;
+      background: -webkit-linear-gradient(270deg, v.$pink, v.$orange);
+      filter: brightness(1.4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
     }
   }
 }
