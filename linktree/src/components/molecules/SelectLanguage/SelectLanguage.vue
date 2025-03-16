@@ -77,7 +77,7 @@ const onLanguageClick = (lang: "en" | "it") => {
     .select-language__button__chevron {
       width: 1.5rem;
       height: 1.5rem;
-      stroke: v.$color200;
+      stroke: v.$fontColor;
       margin: 0;
       @include m.transition(all, 0.4s, ease);
     }
@@ -97,10 +97,17 @@ const onLanguageClick = (lang: "en" | "it") => {
       cursor: pointer;
       padding: 0.25rem 0.75rem;
       border-radius: 0.5rem;
-      @include m.transition(all, 0.4s);
+      @include m.transition(all, 0.2s);
+      &:hover {
+        background-color: v.$cardBackground;
+      }
       &.active {
-        background-color: v.$color700;
+        background-color: v.$orange;
         color: white;
+        cursor: default;
+        &:hover {
+          background-color: v.$orange;
+        }
       }
       svg {
         width: 1.5rem;

@@ -3,17 +3,12 @@
 
 ::-webkit-scrollbar {
   background-color: v.$background;
-  width: 0.5rem;
-  border-radius: 2rem;
-  -webkit-background-clip: text;
+  width: 0.8rem;
   @include m.transition(all, 0.2s, ease-in-out);
 }
 
-::-webkit-scrollbar-track {
-  border-radius: 2rem;
-}
-
 ::-webkit-scrollbar-thumb {
-  background-color: v.$color700;
-  border-radius: 0.625rem;
+  background: linear-gradient(v.$pink, v.$orange);
+  border-radius: 1rem;
+  border: 0.2rem solid v.$background;
 }

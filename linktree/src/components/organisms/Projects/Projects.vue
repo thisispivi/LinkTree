@@ -28,10 +28,11 @@ onMounted(async () => {
         scale: 1,
         opacity: 1,
         ease: "power2.out",
+        markers: true,
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
-          end: "top 80%",
+          start: "top 90%",
+          end: "top 85%",
           scrub: true,
           scroller: ".home",
         },
