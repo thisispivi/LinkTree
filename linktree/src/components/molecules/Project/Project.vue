@@ -130,7 +130,12 @@ const toggleShowAllTechs = () => {
         h3 {
           margin: 0;
           font-size: 1.5rem;
-          color: v.$color600;
+          color: v.$lightPurple;
+          background: -webkit-linear-gradient(270deg, v.$pink, v.$orange);
+          filter: brightness(1.4);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           font-family: "Raleway", sans-serif;
         }
         .btn--github {
@@ -138,7 +143,7 @@ const toggleShowAllTechs = () => {
           height: 1.2rem;
           margin-left: 0.5rem;
           svg {
-            fill: v.$color600;
+            fill: v.$fontColor;
           }
         }
       }
@@ -165,7 +170,7 @@ const toggleShowAllTechs = () => {
       button {
         background: none;
         border: none;
-        color: v.$color600;
+        color: v.$lightPurple;
         width: 3rem;
         cursor: pointer;
         font-size: 1rem;
