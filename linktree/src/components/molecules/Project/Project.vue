@@ -74,7 +74,7 @@ const toggleShowAllTechs = () => {
           :tech="tech"
         />
         <button v-if="isTechsOverflowing" @click.stop="toggleShowAllTechs">
-          {{ isShowMore ? "Less" : "More" }}
+          {{ isShowMore ? $t("less") : $t("more") }}
         </button>
       </div>
     </div>
@@ -169,6 +169,7 @@ const toggleShowAllTechs = () => {
         cursor: pointer;
         font-size: 1rem;
         padding: 0;
+        font-style: italic;
         &:hover {
           text-decoration: underline;
         }

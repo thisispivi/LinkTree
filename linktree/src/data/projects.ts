@@ -16,7 +16,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Syrto_small.png",
     key: "syrto",
-    pillColor: "#EB9486",
+    pillColor: "#ee548c",
     pillKey: "work",
     tags: [
       "azure",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/TravelMap_small.png",
     key: "travelMap",
-    pillColor: "#F3DE8A",
+    pillColor: "#fc8b59",
     pillKey: "projects",
     githubUrl: "https://github.com/thisispivi/TravelMap",
     tags: [
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Tennisdle_small.png",
     key: "tennisdle",
-    pillColor: "#F3DE8A",
+    pillColor: "#fc8b59",
     pillKey: "projects",
     githubUrl: "https://github.com/thisispivi/Tennisdle",
     tags: [
