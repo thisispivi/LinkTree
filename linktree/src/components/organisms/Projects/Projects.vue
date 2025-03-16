@@ -1,9 +1,43 @@
 <script setup lang="ts">
 import { Projects } from "../../../data/projects";
 import { Project } from "../../molecules";
+import { onMounted, nextTick } from "vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 defineProps({
   projects: { type: Array as () => Projects, required: true },
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(async () => {
+  await nextTick();
+
+  const elements = gsap.utils.toArray<HTMLElement>(".project-item");
+  if (elements.length === 0) {
+    console.warn("No .project-item elements found.");
+    return;
+  }
+
+  elements.forEach((el) => {
+    gsap.fromTo(
+      el,
+      { scale: 0.8, opacity: 0.5 },
+      {
+        scale: 1,
+        opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          end: "top 80%",
+          scrub: true,
+          scroller: ".home",
+        },
+      }
+    );
+  });
 });
 </script>
 
@@ -15,6 +49,7 @@ defineProps({
           v-for="project in projects"
           :key="project.key"
           :project="project"
+          class="project-item"
         />
       </div>
     </div>
@@ -29,11 +64,13 @@ defineProps({
   justify-content: center;
   padding-block: 1.5rem;
   width: 100%;
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: inherit;
+
     .projects__list {
       display: flex;
       flex-direction: column;

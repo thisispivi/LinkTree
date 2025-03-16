@@ -32,6 +32,7 @@ import ESLintIcon from "./tech/ESLint.svg";
 import ExpressIcon from "./tech/Express.svg";
 import FastAPIIcon from "./tech/FastAPI.svg";
 import FormikIcon from "./tech/Formik.svg";
+import GSAPIcon from "./tech/GSAP.svg";
 import I18nextIcon from "./tech/I18next.svg";
 import KerasIcon from "./tech/Keras.svg";
 import NPMIcon from "./tech/NPM.svg";
@@ -70,6 +71,7 @@ export {
   ExpressIcon,
   FastAPIIcon,
   FormikIcon,
+  GSAPIcon,
   I18nextIcon,
   KerasIcon,
   NPMIcon,

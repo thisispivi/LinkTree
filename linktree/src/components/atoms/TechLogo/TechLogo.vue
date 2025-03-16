@@ -11,6 +11,7 @@ import {
   ExpressIcon,
   FastAPIIcon,
   FormikIcon,
+  GSAPIcon,
   I18nextIcon,
   KerasIcon,
   NPMIcon,
@@ -53,6 +54,7 @@ const { tech } = defineProps<{ tech: string }>();
   <ExpressIcon v-else-if="tech === 'express'" />
   <FastAPIIcon v-else-if="tech === 'fastapi'" />
   <FormikIcon v-else-if="tech === 'formik'" />
+  <GSAPIcon v-else-if="tech === 'gsap'" />
   <I18nextIcon v-else-if="tech === 'i18next'" />
   <KerasIcon v-else-if="tech === 'keras'" />
   <NPMIcon v-else-if="tech === 'npm'" />

@@ -120,6 +120,7 @@ export const projects: Project[] = [
       "eslint",
       "prettier",
       "i18next",
+      "gsap",
     ],
   },
 ];
