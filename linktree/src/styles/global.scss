@@ -46,3 +46,24 @@ body {
   display: flex;
   overflow: hidden;
 }
+
+.v-popper__popper {
+  opacity: 0.8;
+  .v-popper__wrapper {
+    .v-popper__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: v.$background;
+      color: v.$fontColor;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .v-popper__arrow-container {
+      .v-popper__arrow-outer {
+        border-color: v.$background;
+      }
+    }
+  }
+}
