@@ -1,0 +1,38 @@
+<svg id="svg34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.89 33.89">
+    <defs>
+        <style>
+            .plotly-1 {
+                fill: #119dff;
+            }
+
+            .plotly-2 {
+                fill: #25fefd;
+            }
+
+            .plotly-3 {
+                fill: #fff;
+            }
+        </style>
+    </defs>
+    <g id="g961">
+        <rect id="rect1352" class="plotly-1" width="33.89" height="33.89" rx="1.54" />
+        <circle id="circle1368" class="plotly-2" cx="20.02" cy="13.86" r="1.54" />
+        <circle id="circle1370" class="plotly-2" cx="26.19" cy="7.7" r="1.54" />
+        <circle id="circle1372" class="plotly-2" cx="20.02" cy="7.7" r="1.54" />
+        <circle id="circle1374" class="plotly-2" cx="13.86" cy="7.7" r="1.54" />
+        <circle id="circle1376" class="plotly-2" cx="7.7" cy="7.7" r="1.54" />
+        <circle id="circle1378" class="plotly-2" cx="7.7" cy="13.86" r="1.54" />
+        <path id="path1380" class="plotly-3"
+            d="M8.58,19.24A1.54,1.54,0,0,0,7,20.78v6.16a1.54,1.54,0,1,0,3.08,0V20.78a1.54,1.54,0,0,0-1.54-1.54Z"
+            transform="translate(-0.88 -0.76)" />
+        <path id="path1382" class="plotly-3"
+            d="M20.9,19.24a1.54,1.54,0,0,0-1.54,1.54v6.16a1.54,1.54,0,0,0,3.08,0V20.78a1.54,1.54,0,0,0-1.54-1.54Z"
+            transform="translate(-0.88 -0.76)" />
+        <path id="path1384" class="plotly-3"
+            d="M14.74,13.08a1.54,1.54,0,0,0-1.54,1.54V26.94a1.54,1.54,0,1,0,3.08,0V14.62A1.54,1.54,0,0,0,14.74,13.08Z"
+            transform="translate(-0.88 -0.76)" />
+        <path id="path1386" class="plotly-3"
+            d="M27.06,13.08a1.54,1.54,0,0,0-1.54,1.54V26.94a1.54,1.54,0,1,0,3.08,0V14.62A1.54,1.54,0,0,0,27.06,13.08Z"
+            transform="translate(-0.88 -0.76)" />
+    </g>
+</svg>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Project } from "../../../data/projects";
-import { Pill } from "../../atoms";
+import { Pill, TechLogo } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
 
 const { project } = defineProps({
@@ -32,6 +32,9 @@ const openProject = () => {
         <p>
           {{ $t(`projects.${project.key}.description`) }}
         </p>
+      </div>
+      <div v-if="project.tags" class="techs">
+        <TechLogo v-for="tech in project.tags" :key="tech" :tech="tech" />
       </div>
     </div>
   </div>
@@ -95,17 +98,41 @@ const openProject = () => {
         }
       }
     }
+
+    .description {
+      p {
+        font-style: 400;
+        opacity: 0.8;
+      }
+    }
+
+    .techs {
+      margin-top: auto;
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      svg {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 890px) {
   .project {
     flex-direction: column;
-    width: 24rem;
+    width: min(100%, 25rem);
     .image {
       height: 16rem;
       border-radius: 0.5rem 0.5rem 0 0;
       margin-bottom: 0.8rem;
+    }
+    .metadata {
+      .techs {
+        margin-top: 1.5rem;
+      }
     }
   }
 }

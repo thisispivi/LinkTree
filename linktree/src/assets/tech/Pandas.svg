@@ -1,0 +1,25 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.57 220.43">
+    <defs>
+        <style>
+            .pandas-1 {
+                fill: white;
+            }
+
+            .pandas-2 {
+                fill: #ffca00;
+            }
+
+            .pandas-3 {
+                fill: #e70488;
+            }
+        </style>
+    </defs>
+    <rect class="pandas-1" x="38.69" y="13.03" width="24.09" height="50.02" />
+    <rect class="pandas-1" x="38.69" y="115.78" width="24.09" height="50.02" />
+    <rect class="pandas-2" x="38.69" y="77.65" width="24.09" height="23.6" />
+    <rect class="pandas-1" y="54.16" width="24.09" height="166.27" />
+    <rect class="pandas-1" x="76.59" y="157.05" width="24.09" height="50.02" />
+    <rect class="pandas-1" x="76.59" y="54.22" width="24.09" height="50.02" />
+    <rect class="pandas-3" x="76.59" y="118.84" width="24.09" height="23.6" />
+    <rect class="pandas-1" x="114.48" width="24.09" height="166.27" />
+</svg>
