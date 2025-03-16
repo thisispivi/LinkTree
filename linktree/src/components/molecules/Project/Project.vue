@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
 import { Project } from "../../../data/projects";
 import { Pill, TechLogo } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
@@ -9,6 +10,37 @@ const { project } = defineProps({
 
 const openProject = () => {
   window.open(project.url, "_blank");
+};
+
+const getNumTechsPerRow = (width: number) => {
+  if (width > 984) return 15;
+  if (width > 948) return 14;
+  if (width > 909) return 13;
+  return 12;
+};
+
+const numTechsPerRow = ref(getNumTechsPerRow(window.innerWidth));
+
+const isTechsOverflowing = ref(
+  (project.tags || []).length > numTechsPerRow.value
+);
+const isShowMore = ref(false);
+
+const updateLayout = () => {
+  numTechsPerRow.value = getNumTechsPerRow(window.innerWidth);
+  isTechsOverflowing.value = (project.tags || []).length > numTechsPerRow.value;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateLayout);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateLayout);
+});
+
+const toggleShowAllTechs = () => {
+  isShowMore.value = !isShowMore.value;
 };
 </script>
 
@@ -34,7 +66,16 @@ const openProject = () => {
         </p>
       </div>
       <div v-if="project.tags" class="techs">
-        <TechLogo v-for="tech in project.tags" :key="tech" :tech="tech" />
+        <TechLogo
+          v-for="tech in isShowMore || !isTechsOverflowing
+            ? project.tags
+            : project.tags.slice(0, numTechsPerRow - 2)"
+          :key="tech"
+          :tech="tech"
+        />
+        <button v-if="isTechsOverflowing" @click.stop="toggleShowAllTechs">
+          {{ isShowMore ? "Less" : "More" }}
+        </button>
       </div>
     </div>
   </div>
@@ -79,6 +120,9 @@ const openProject = () => {
       align-items: center;
       justify-content: space-between;
       margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      width: 100%;
       .title {
         display: flex;
         align-items: center;
@@ -100,6 +144,7 @@ const openProject = () => {
     }
 
     .description {
+      margin-bottom: 1.5rem;
       p {
         font-style: 400;
         opacity: 0.8;
@@ -116,6 +161,18 @@ const openProject = () => {
         width: 1.5rem;
         height: 1.5rem;
       }
+      button {
+        background: none;
+        border: none;
+        color: v.$color600;
+        width: 3rem;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
@@ -128,11 +185,6 @@ const openProject = () => {
       height: 16rem;
       border-radius: 0.5rem 0.5rem 0 0;
       margin-bottom: 0.8rem;
-    }
-    .metadata {
-      .techs {
-        margin-top: 1.5rem;
-      }
     }
   }
 }
