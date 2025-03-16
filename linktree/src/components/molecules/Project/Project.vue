@@ -97,6 +97,7 @@ const toggleShowAllTechs = () => {
   margin-bottom: auto;
   max-width: 55rem;
   column-gap: 1rem;
+  width: 100%;
   @include m.transition(all, 0.4s);
 
   &:hover {
@@ -146,7 +147,7 @@ const toggleShowAllTechs = () => {
     .description {
       margin-bottom: 1.5rem;
       p {
-        font-style: 400;
+        font-weight: 300;
         opacity: 0.8;
       }
     }

@@ -11,6 +11,10 @@
     "tennisdle": {
       "title": "Tennisdle",
       "description": "Tennisdle is a web app where players must guess the daily ATP or WTA tennis player based on hints such as age, height, titles won (Grand Slams, Olympics, Finals), and playing style (dominant hand and backhand type)."
+    },
+    "linktree": {
+      "title": "Linktree",
+      "description": "Linktree is a web app designed to showcase all my links in one place. It is the website you are currently visiting."
     }
   },
   "categories": {

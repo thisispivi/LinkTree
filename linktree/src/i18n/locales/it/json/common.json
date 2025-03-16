@@ -11,6 +11,10 @@
     "tennisdle": {
       "title": "Tennisdle",
       "description": "Tennisdle è una web app in cui si deve indovinare il tennista ATP o la tennista WTA del giorno basandosi su indizi come età, altezza, titoli vinti (Grand Slam, Olimpiadi, Finals) e stile di gioco (mano dominante e tipo di rovescio)."
+    },
+    "linktree": {
+      "title": "Linktree",
+      "description": "Linktree è una webapp pensata per mostrare tutti i miei link in un unico posto. È il sito web che stai visitando attualmente."
     }
   },
   "categories": {

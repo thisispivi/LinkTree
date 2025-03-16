@@ -101,4 +101,25 @@ export const projects: Project[] = [
       "pandas",
     ],
   },
+  {
+    url: "https://linktree.pivi.dev/",
+    imageUrl:
+      "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Linktree_small.png",
+    key: "linktree",
+    pillColor: "#fc8b59",
+    pillKey: "projects",
+    githubUrl: "https://github.com/thisispivi/LinkTree",
+    tags: [
+      "vue",
+      "typescript",
+      "vite",
+      "redux",
+      "sass",
+      "npm",
+      "nodejs",
+      "eslint",
+      "prettier",
+      "i18next",
+    ],
+  },
 ];
