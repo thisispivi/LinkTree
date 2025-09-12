@@ -41,6 +41,7 @@ import PandasIcon from "./tech/Pandas.svg";
 import PassportIcon from "./tech/Passport.svg";
 import PillowIcon from "./tech/Pillow.svg";
 import PlotlyIcon from "./tech/Plotly.svg";
+import PNPMIcon from "./tech/PNPM.svg";
 import PolarsIcon from "./tech/Polars.svg";
 import PrettierIcon from "./tech/Prettier.svg";
 import PythonIcon from "./tech/Python.svg";
@@ -80,6 +81,7 @@ export {
   PassportIcon,
   PillowIcon,
   PlotlyIcon,
+  PNPMIcon,
   PolarsIcon,
   PrettierIcon,
   PythonIcon,

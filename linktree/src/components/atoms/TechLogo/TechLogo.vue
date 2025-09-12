@@ -20,6 +20,7 @@ import {
   PassportIcon,
   PillowIcon,
   PlotlyIcon,
+  PNPMIcon,
   PolarsIcon,
   PrettierIcon,
   PythonIcon,
@@ -63,6 +64,7 @@ const { tech } = defineProps<{ tech: string }>();
   <PassportIcon v-else-if="tech === 'passport'" v-tooltip="'Passport'" />
   <PillowIcon v-else-if="tech === 'pillow'" v-tooltip="'Pillow'" />
   <PlotlyIcon v-else-if="tech === 'plotly'" v-tooltip="'Plotly'" />
+  <PNPMIcon v-else-if="tech === 'pnpm'" v-tooltip="'PNPM'" />
   <PolarsIcon v-else-if="tech === 'polars'" v-tooltip="'Polars'" />
   <PrettierIcon v-else-if="tech === 'prettier'" v-tooltip="'Prettier'" />
   <PythonIcon v-else-if="tech === 'python'" v-tooltip="'Python'" />
