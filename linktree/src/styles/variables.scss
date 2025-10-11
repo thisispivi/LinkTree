@@ -1,9 +1,20 @@
-$background: #111827;
+$background: #21242d;
 $backgroundHover: #283341;
+$bgStart: #121521;
+$bgEnd: #1a2030;
+$backgroundGradient: linear-gradient(180deg, $bgStart 0%, $bgEnd 100%);
+
 $fontColor: #f1f1f1;
 
 $pink: #eb3678;
+$bubblePinkFrom: lighten($pink, 4%);
+$bubbleGlowPink: rgba($pink, 0.12);
+$bubblePinkTo: rgba($pink, 0.22);
+
 $orange: #fb773c;
+$bubbleOrangeFrom: lighten($orange, 4%);
+$bubbleOrangeTo: rgba($orange, 0.22);
+$bubbleGlowOrange: rgba($orange, 0.12);
 
 $lightPurple: #c7b2f9;
 

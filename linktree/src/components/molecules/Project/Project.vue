@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { Project } from "../../../data/projects";
-import { Pill, TechLogo } from "../../atoms";
+import { Pill } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
 
 const { project } = defineProps({
@@ -24,7 +24,6 @@ const numTechsPerRow = ref(getNumTechsPerRow(window.innerWidth));
 const isTechsOverflowing = ref(
   (project.tags || []).length > numTechsPerRow.value
 );
-const isShowMore = ref(false);
 
 const updateLayout = () => {
   numTechsPerRow.value = getNumTechsPerRow(window.innerWidth);
@@ -38,10 +37,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("resize", updateLayout);
 });
-
-const toggleShowAllTechs = () => {
-  isShowMore.value = !isShowMore.value;
-};
 </script>
 
 <template>
@@ -64,18 +59,6 @@ const toggleShowAllTechs = () => {
         <p>
           {{ $t(`projects.${project.key}.description`) }}
         </p>
-      </div>
-      <div v-if="project.tags" class="techs">
-        <TechLogo
-          v-for="tech in isShowMore || !isTechsOverflowing
-            ? project.tags
-            : project.tags.slice(0, numTechsPerRow - 2)"
-          :key="tech"
-          :tech="tech"
-        />
-        <button v-if="isTechsOverflowing" @click.stop="toggleShowAllTechs">
-          {{ isShowMore ? $t("less") : $t("more") }}
-        </button>
       </div>
     </div>
   </div>
