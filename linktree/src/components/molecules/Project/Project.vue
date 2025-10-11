@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
 import { Project } from "../../../data/projects";
 import { Pill } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
@@ -11,32 +10,6 @@ const { project } = defineProps({
 const openProject = () => {
   window.open(project.url, "_blank");
 };
-
-const getNumTechsPerRow = (width: number) => {
-  if (width > 984) return 15;
-  if (width > 948) return 14;
-  if (width > 909) return 13;
-  return 12;
-};
-
-const numTechsPerRow = ref(getNumTechsPerRow(window.innerWidth));
-
-const isTechsOverflowing = ref(
-  (project.tags || []).length > numTechsPerRow.value
-);
-
-const updateLayout = () => {
-  numTechsPerRow.value = getNumTechsPerRow(window.innerWidth);
-  isTechsOverflowing.value = (project.tags || []).length > numTechsPerRow.value;
-};
-
-onMounted(() => {
-  window.addEventListener("resize", updateLayout);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("resize", updateLayout);
-});
 </script>
 
 <template>
@@ -74,18 +47,46 @@ onUnmounted(() => {
   padding: 1rem;
   $borderRadius: 1rem;
   border-radius: $borderRadius;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2rem);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  position: relative;
+  overflow: hidden;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(60, 60, 60, 0.45),
+    rgba(10, 10, 20, 0.54)
+  );
+  box-shadow:
+    0 0.625rem 1.875rem rgba(0, 0, 0, 0.22),
+    inset 0 0.0625rem 0.0625rem rgba(255, 255, 255, 0.24);
+  cursor: pointer;
   margin-bottom: auto;
   max-width: 55rem;
   column-gap: 1rem;
   width: 100%;
-  @include m.transition(all, 0.4s);
+  @include m.transition(transform, 0.25s);
 
   &:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.17);
+    transform: scale(1.02) !important;
+  }
+
+  .media {
+    position: relative;
+    flex: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 0.5rem;
+      background: radial-gradient(
+        6rem 6rem at 50% 50%,
+        rgba(v.$pink, 0.14),
+        rgba(v.$orange, 0.1) 40%,
+        transparent 70%
+      );
+      filter: blur(1rem);
+      z-index: 0;
+    }
   }
 
   .image {
@@ -133,47 +134,23 @@ onUnmounted(() => {
     }
 
     .description {
-      margin-bottom: 1.5rem;
       p {
+        color: v.$fontColor;
+        opacity: 0.9;
+        line-height: 1.6;
         font-weight: 300;
-        opacity: 0.8;
-      }
-    }
-
-    .techs {
-      margin-top: auto;
-      display: flex;
-      gap: 0.45rem;
-      flex-wrap: wrap;
-      svg {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-      button {
-        background: none;
-        border: none;
-        color: v.$lightPurple;
-        width: 3rem;
-        cursor: pointer;
-        font-size: 1rem;
-        padding: 0;
-        font-style: italic;
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 55.625rem) {
   .project {
     flex-direction: column;
     width: min(100%, 25rem);
     .image {
       height: 16rem;
-      border-radius: 0.5rem 0.5rem 0 0;
+      border-radius: 0.5rem;
       margin-bottom: 0.8rem;
     }
   }

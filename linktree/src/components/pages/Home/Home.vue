@@ -4,7 +4,7 @@ import { Base } from "../../templates";
 </script>
 
 <template>
-  <div class="home-page">
+  <div class="home">
     <div class="background-bubbles" aria-hidden="true">
       <span></span>
       <span></span>
@@ -22,7 +22,7 @@ import { Base } from "../../templates";
 <style lang="scss" scoped>
 @use "../../../styles/variables.scss" as v;
 
-.home-page {
+.home {
   width: 100%;
   height: 100%;
   overflow-y: auto;

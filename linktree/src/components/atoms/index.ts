@@ -22,6 +22,3 @@ export { Pill };
 
 import Profile from "./Profile/Profile.vue";
 export { Profile };
-
-import TechLogo from "./TechLogo/TechLogo.vue";
-export { TechLogo };

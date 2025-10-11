@@ -1,18 +1,20 @@
-$background: #21242d;
+@use "sass:color";
+
+$background: #262626;
 $backgroundHover: #283341;
-$bgStart: #121521;
-$bgEnd: #1a2030;
+$bgStart: #121212;
+$bgEnd: #0f0f0f;
 $backgroundGradient: linear-gradient(180deg, $bgStart 0%, $bgEnd 100%);
 
 $fontColor: #f1f1f1;
 
 $pink: #eb3678;
-$bubblePinkFrom: lighten($pink, 4%);
+$bubblePinkFrom: color.adjust($pink, $lightness: 4%);
 $bubbleGlowPink: rgba($pink, 0.12);
 $bubblePinkTo: rgba($pink, 0.22);
 
 $orange: #fb773c;
-$bubbleOrangeFrom: lighten($orange, 4%);
+$bubbleOrangeFrom: color.adjust($orange, $lightness: 4%);
 $bubbleOrangeTo: rgba($orange, 0.22);
 $bubbleGlowOrange: rgba($orange, 0.12);
 

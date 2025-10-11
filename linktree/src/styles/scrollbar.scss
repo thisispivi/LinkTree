@@ -5,6 +5,7 @@
   background-color: v.$background;
   width: 0.8rem;
   @include m.transition(all, 0.2s, ease-in-out);
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
