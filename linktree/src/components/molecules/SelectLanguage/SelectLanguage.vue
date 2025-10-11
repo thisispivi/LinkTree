@@ -89,7 +89,7 @@ const onLanguageClick = (lang: "en" | "it") => {
     background-color: v.$background;
     backdrop-filter: blur(4rem);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.188rem 0.188rem 0rem;
     padding: 0.5rem;
     div {
       display: flex;
@@ -131,6 +131,6 @@ const onLanguageClick = (lang: "en" | "it") => {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(-20rem);
 }
 </style>

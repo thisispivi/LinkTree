@@ -65,10 +65,6 @@ const openProject = () => {
   width: 100%;
   @include m.transition(transform, 0.25s);
 
-  &:hover {
-    transform: scale(1.02) !important;
-  }
-
   .media {
     position: relative;
     flex: 0;

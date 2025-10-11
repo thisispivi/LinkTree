@@ -21,6 +21,9 @@ import { Base } from "../../templates";
 
 <style lang="scss" scoped>
 @use "../../../styles/variables.scss" as v;
+// Added for Dart Sass compatibility
+@use "sass:map";
+@use "sass:math";
 
 .home {
   width: 100%;
@@ -110,8 +113,8 @@ import { Base } from "../../templates";
   left: $left;
   top: $top;
   rotate: $rotate;
-  --half-width: #{$width / 2};
-  --half-height: #{$height / 2};
+  --half-width: #{math.div($width, 2)};
+  --half-height: #{math.div($height, 2)};
   --animation-delay: #{$delay};
   --duration: #{$duration};
   --min-x: calc(#{$x-min} + var(--half-width) + var(--padding-x));
@@ -202,21 +205,21 @@ $background-bubble-configs: (
 @each $i, $cfg in $background-bubble-configs {
   .background-bubbles span:nth-child(#{$i}) {
     @include bubble-base(
-      map-get($cfg, w),
-      map-get($cfg, h),
-      map-get($cfg, left),
-      map-get($cfg, top),
-      map-get($cfg, delay),
-      map-get($cfg, duration),
-      map-get($cfg, x-min),
-      map-get($cfg, x-max),
-      map-get($cfg, y-min),
-      map-get($cfg, y-max),
-      map-get($cfg, direction),
-      map-get($cfg, rotate)
+      map.get($cfg, w),
+      map.get($cfg, h),
+      map.get($cfg, left),
+      map.get($cfg, top),
+      map.get($cfg, delay),
+      map.get($cfg, duration),
+      map.get($cfg, x-min),
+      map.get($cfg, x-max),
+      map.get($cfg, y-min),
+      map.get($cfg, y-max),
+      map.get($cfg, direction),
+      map.get($cfg, rotate)
     );
 
-    @if map-get($cfg, theme) == pink {
+    @if map.get($cfg, theme) == pink {
       @include bubble-glow-pink;
     } @else {
       @include bubble-glow-orange;

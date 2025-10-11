@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { MailIcon } from "../../../assets";
 import {
   ButtonGithub,
   ButtonInstagram,
@@ -9,20 +10,6 @@ import {
   Profile,
 } from "../../atoms";
 import { SelectLanguage } from "../../molecules";
-
-document.addEventListener("DOMContentLoaded", () => {
-  const element = document.querySelector(".rotating-btn") as HTMLElement | null;
-  if (element) {
-    let angle = 0;
-    const rotate = () => {
-      angle = (angle + 3) % 360;
-      element.style.setProperty("--angle", `${angle}deg`);
-      requestAnimationFrame(rotate);
-    };
-
-    rotate();
-  }
-});
 
 const onClick = () => {
   window.open("mailto:andreapiras2809@gmail.com");
@@ -49,8 +36,16 @@ const onClick = () => {
       <ButtonX />
       <ButtonYoutube />
     </div>
-    <button class="rotating-btn" @click="onClick">
-      <h3>{{ $t("contactMe") }}</h3>
+    <button
+      class="rotating-btn contact-btn"
+      aria-label="Contact me via email"
+      @click="onClick"
+    >
+      <span class="btn__glow" aria-hidden="true"></span>
+      <span class="btn__inner">
+        <MailIcon class="btn__icon" />
+        <span class="btn__label">{{ $t("contactMe") }}</span>
+      </span>
     </button>
   </div>
 </template>
@@ -58,6 +53,17 @@ const onClick = () => {
 <style lang="scss" scoped>
 @use "../../../styles/variables.scss" as v;
 @use "../../../styles/mixins.scss" as m;
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes spin {
+  to {
+    --angle: 1turn;
+  }
+}
 
 .header {
   display: flex;
@@ -119,51 +125,111 @@ const onClick = () => {
   }
 
   .rotating-btn {
-    width: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     height: 3rem;
-    border-radius: 3rem;
-    outline: none;
-    background: v.$background;
-    border: 2px solid transparent;
-    cursor: pointer;
-    padding-inline: 2rem;
+    padding: 0 1.6rem;
     margin-top: 1.5rem;
+    border-radius: 999rem;
+    outline: none;
+    border: 0.125rem solid transparent;
     background:
       linear-gradient(v.$background, v.$background) padding-box,
       conic-gradient(
-          from var(--angle, 0),
-          transparent,
-          white 10%,
-          transparent 20%
+          from var(--angle, 0deg),
+          v.$background 0turn,
+          v.$pink 0.3turn,
+          v.$orange 0.4turn,
+          v.$pink 0.6turn,
+          v.$orange 0.7turn,
+          v.$background 0.9turn,
+          v.$background 1turn
         )
         border-box;
-    @include m.transition(all, 0.2s, ease-in-out);
+    cursor: pointer;
+    animation: spin 3.5s linear infinite;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+    @include m.transition(all, 0.25s, ease);
 
-    &:hover {
-      background:
-        linear-gradient(v.$background, v.$background) padding-box,
-        conic-gradient(
-            from var(--angle, 0),
-            transparent,
-            v.$pink 10%,
-            v.$orange 5%,
-            transparent 20%
-          )
-          border-box;
-      filter: brightness(1.4);
+    --grad-start: #{v.$pink};
+    --grad-end: #{v.$orange};
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -0.125rem;
+      border-radius: inherit;
+      background: radial-gradient(
+        60% 80% at 50% 120%,
+        rgba(v.$pink, 0.25),
+        rgba(v.$orange, 0.18),
+        transparent 70%
+      );
+      filter: blur(0.75rem);
+      z-index: 0;
+      pointer-events: none;
     }
 
-    h3 {
+    &:hover {
+      transform: translateY(-0.125rem);
+      filter: brightness(1.1);
+      animation-duration: 1.25s;
+      box-shadow:
+        0 0.75rem 1.75rem rgba(0, 0, 0, 0.35),
+        0 0 1.25rem rgba(v.$background, 0.25);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.35);
+    }
+
+    &:focus-visible {
+      box-shadow:
+        0 0 0 0.1875rem rgba(255, 255, 255, 0.08),
+        0 0 0 0.375rem rgba(v.$orange, 0.45);
+      outline: none;
+    }
+
+    .btn__inner {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn__icon {
+      width: 1.125rem;
+      height: 1.125rem;
+      filter: drop-shadow(0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.25));
+    }
+
+    .btn__label {
       margin: 0;
-      font-size: 1.25rem;
-      color: v.$lightPurple;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
       background: -webkit-linear-gradient(270deg, v.$pink, v.$orange);
-      filter: brightness(1.4);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-family: "Raleway", sans-serif;
-      text-transform: uppercase;
+      filter: brightness(1.35);
+    }
+
+    h3 {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rotating-btn {
+      animation: none;
     }
   }
 }
