@@ -79,7 +79,7 @@ const onLanguageClick = (lang: "en" | "it") => {
       height: 1.5rem;
       stroke: v.$fontColor;
       margin: 0;
-      @include m.transition(all, 0.4s, ease);
+      @include m.transition(transform, 0.18s, ease);
     }
   }
   .select-language__dropdown {
@@ -88,9 +88,12 @@ const onLanguageClick = (lang: "en" | "it") => {
     right: 0;
     background-color: v.$background;
     backdrop-filter: blur(4rem);
+    -webkit-backdrop-filter: blur(4rem);
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.188rem 0.188rem 0rem;
     padding: 0.5rem;
+    will-change: transform, opacity;
+    contain: paint;
     div {
       display: flex;
       align-items: center;
@@ -124,13 +127,15 @@ const onLanguageClick = (lang: "en" | "it") => {
 .v-enter-active,
 .v-leave-active {
   opacity: 1;
-  transform: translateY(0);
-  @include m.transition(all, 0.4s, ease);
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
 }
 
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-  transform: translateY(-20rem);
+  transform: translate3d(0, -0.75rem, 0);
 }
 </style>

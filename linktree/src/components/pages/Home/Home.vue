@@ -45,6 +45,7 @@ import { Base } from "../../templates";
     inset: 0;
     z-index: 0;
     pointer-events: none;
+    contain: paint;
     background:
       radial-gradient(
         60rem 36rem at 8rem 4rem,
@@ -66,6 +67,9 @@ import { Base } from "../../templates";
       animation: bubble-roam var(--duration, 36s) linear infinite;
       animation-delay: var(--animation-delay, 0s);
       mix-blend-mode: soft-light;
+      will-change: transform;
+      backface-visibility: hidden;
+      transform: translate3d(var(--min-x), var(--min-y), 0);
     }
   }
 }
@@ -229,19 +233,19 @@ $background-bubble-configs: (
 
 @keyframes bubble-roam {
   0% {
-    transform: translate(var(--min-x), var(--min-y));
+    transform: translate3d(var(--min-x), var(--min-y), 0);
   }
   25% {
-    transform: translate(var(--max-x), var(--min-y));
+    transform: translate3d(var(--max-x), var(--min-y), 0);
   }
   50% {
-    transform: translate(var(--max-x), var(--max-y));
+    transform: translate3d(var(--max-x), var(--max-y), 0);
   }
   75% {
-    transform: translate(var(--min-x), var(--max-y));
+    transform: translate3d(var(--min-x), var(--max-y), 0);
   }
   100% {
-    transform: translate(var(--min-x), var(--min-y));
+    transform: translate3d(var(--min-x), var(--min-y), 0);
   }
 }
 

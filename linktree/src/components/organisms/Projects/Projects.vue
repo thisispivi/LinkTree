@@ -14,6 +14,10 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(async () => {
   await nextTick();
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
   const elements = gsap.utils.toArray<HTMLElement>(".project-item");
   if (elements.length === 0) {
     console.warn("No .project-item elements found.");
@@ -28,13 +32,14 @@ onMounted(async () => {
         scale: 1,
         opacity: 1,
         ease: "power2.out",
-        markers: true,
         scrollTrigger: {
           trigger: el,
           start: "top 90%",
           end: "top 85%",
-          scrub: true,
+          scrub: 0.25,
           scroller: ".home",
+          fastScrollEnd: true,
+          invalidateOnRefresh: true,
         },
       }
     );
@@ -79,6 +84,11 @@ onMounted(async () => {
       justify-content: center;
       width: 90%;
       padding-bottom: 3rem;
+
+      :deep(.project-item) {
+        will-change: transform, opacity;
+        transform: translateZ(0);
+      }
     }
   }
 }
