@@ -22,7 +22,9 @@ const linkedInUrl = "https://www.linkedin.com/in/andrea-piras-pivi";
     height: 100%;
     opacity: 0.75;
     @include m.transition(all, 0.2s, ease-in-out);
-    &:hover {
+  }
+  &:hover {
+    svg {
       opacity: 1;
     }
   }

@@ -9,6 +9,7 @@ import {
   ButtonYoutube,
   Profile,
 } from "../../atoms";
+import ButtonResume from "../../atoms/Button/ButtonResume.vue";
 import { SelectLanguage } from "../../molecules";
 
 const onClick = () => {
@@ -29,6 +30,7 @@ const onClick = () => {
       </div>
     </div>
     <div class="header__links">
+      <ButtonResume />
       <ButtonGithub />
       <ButtonInstagram />
       <ButtonLinkedIn />

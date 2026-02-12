@@ -21,7 +21,6 @@ import { Base } from "../../templates";
 
 <style lang="scss" scoped>
 @use "../../../styles/variables.scss" as v;
-// Added for Dart Sass compatibility
 @use "sass:map";
 @use "sass:math";
 

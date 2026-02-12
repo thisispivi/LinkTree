@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+	<style type="text/css">
+		.resume-0 {
+			fill: none;
+			stroke-width: 50;
+		}
+
+		.resume-1 {
+			fill: none;
+			stroke-width: 50;
+			stroke-linecap: round;
+		}
+	</style>
+	<path class="resume-0" d="M66.7,326.1c0-139.8,0-209.7,43.4-253.2c43.4-43.4,113.3-43.4,253.2-43.4h74.1c139.8,0,209.7,0,253.2,43.4
+	C734,116.4,734,186.3,734,326.1v148.3c0,139.8,0,209.7-43.4,253.2C647.1,771,577.2,771,437.4,771h-74.1c-139.8,0-209.7,0-253.2-43.4
+	c-43.4-43.4-43.4-113.3-43.4-253.2V326.1z" />
+	<path class="resume-1" d="M252,400.3h296.6" />
+	<path class="resume-1" d="M252,252h296.6" />
+	<path class="resume-1" d="M252,548.6h185.4" />
+</svg>

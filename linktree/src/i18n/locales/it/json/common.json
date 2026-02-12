@@ -15,6 +15,10 @@
     "linktree": {
       "title": "Linktree",
       "description": "Linktree è una webapp pensata per mostrare tutti i miei link in un unico posto. È il sito web che stai visitando attualmente."
+    },
+    "resume": {
+      "title": "Resume Builder",
+      "description": "Resume Builder è una web app moderna e personalizzabile che consente di creare curriculum professionali con più template, palette di colori, font e supporto multilingue. Modifica i tuoi dati tramite form o JSON, o form e poi esporta in PDF. Creato perché avevo bisogno di scrivere il mio CV"
     }
   },
   "categories": {
