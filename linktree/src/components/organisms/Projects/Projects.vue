@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { Projects } from "../../../data/projects";
-import { Project } from "../../molecules";
-import { onMounted, nextTick } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { nextTick, onMounted } from "vue";
+
+import { Projects } from "../../../data/projects";
+import { Project } from "../../molecules";
 
 defineProps({
   projects: { type: Array as () => Projects, required: true },

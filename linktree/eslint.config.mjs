@@ -1,8 +1,10 @@
 import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
-import pluginVue from "eslint-plugin-vue";
 import eslintConfigPrettier from "eslint-config-prettier";
+import noUnsanitized from "eslint-plugin-no-unsanitized";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -11,6 +13,8 @@ export default tseslint.config(
   {
     plugins: {
       "typescript-eslint": tseslint.plugin,
+      nounsanitized: noUnsanitized,
+      "simple-import-sort": simpleImportSort,
     },
     languageOptions: {
       parserOptions: {
@@ -25,6 +29,13 @@ export default tseslint.config(
     rules: {
       "vue/multi-word-component-names": "off",
       "vue/no-reserved-component-names": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+
+      "nounsanitized/method": "error",
+      "nounsanitized/property": "error",
+
+      "simple-import-sort/imports": "warn",
+      "simple-import-sort/exports": "warn",
     },
   },
   {

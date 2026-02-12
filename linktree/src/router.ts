@@ -1,4 +1,5 @@
 import { createMemoryHistory, createRouter } from "vue-router";
+
 import { Home } from "./components/pages";
 
 const routes = [{ path: "/", name: "home", component: Home }];

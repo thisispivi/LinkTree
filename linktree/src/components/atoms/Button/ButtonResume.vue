@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { ResumeIcon } from "../../../assets";
-import { Button } from "..";
 import i18n from "../../../i18n";
+import { Button } from "..";
 
 const openLink = (url: string) => window.open(url, "_blank");
 const resumeUrl = `https://github.com/thisispivi/LinkTree/blob/main/resume/Andrea_Piras_Resume_${i18n.global.locale.toUpperCase().slice(0, 2)}.pdf`;

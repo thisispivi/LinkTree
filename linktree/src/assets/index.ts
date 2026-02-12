@@ -1,6 +1,6 @@
-import UnitedKingdomIcon from "./flags/UnitedKingdom.svg";
 import ItalyIcon from "./flags/Italy.svg";
-export { UnitedKingdomIcon, ItalyIcon };
+import UnitedKingdomIcon from "./flags/UnitedKingdom.svg";
+export { ItalyIcon,UnitedKingdomIcon };
 
 import ChevronIcon from "./icons/Chevron.svg";
 import FacebookIcon from "./icons/Facebook.svg";

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { Header } from "../../organisms";
 import { ref } from "vue";
-import { Projects as ProjectType } from "../../../data/projects";
+
 import { Projects } from "../../../components/organisms";
+import { Projects as ProjectType } from "../../../data/projects";
+import { Header } from "../../organisms";
 
 const headerClass = ref("header");
 
