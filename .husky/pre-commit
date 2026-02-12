@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 cd "$(dirname "$0")/../linktree"
 
 npx tsc --noEmit

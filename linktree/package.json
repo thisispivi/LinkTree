@@ -2,7 +2,7 @@
   "name": "linktree",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://thisispivi.github.io/",
+  "homepage": "linktree.pivi.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
