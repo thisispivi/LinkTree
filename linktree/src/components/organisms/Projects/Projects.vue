@@ -25,19 +25,22 @@ onMounted(async () => {
     return;
   }
 
-  elements.forEach((el) => {
+  elements.forEach((el, i) => {
     gsap.fromTo(
       el,
-      { scale: 0.8, opacity: 0.5 },
+      { y: 60, scale: 0.92, opacity: 0 },
       {
+        y: 0,
         scale: 1,
         opacity: 1,
-        ease: "power2.out",
+        duration: 0.8,
+        delay: i * 0.08,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 90%",
-          end: "top 85%",
-          scrub: 0.25,
+          start: "top 95%",
+          end: "top 70%",
+          scrub: 0.6,
           scroller: ".home",
           fastScrollEnd: true,
           invalidateOnRefresh: true,
@@ -88,6 +91,7 @@ onMounted(async () => {
 
       :deep(.project-item) {
         will-change: transform, opacity;
+        backface-visibility: hidden;
         transform: translateZ(0);
       }
     }

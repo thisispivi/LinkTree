@@ -36,15 +36,15 @@ export const projects: Project[] = [
     pillKey: "projects",
     githubUrl: "https://github.com/thisispivi/Tennisdle",
   },
-  // {
-  //   url: "https://resume.pivi.dev/",
-  //   imageUrl:
-  //     "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Resume_small.png",
-  //   key: "resume",
-  //   pillColor: "#fc8b59",
-  //   pillKey: "projects",
-  //   githubUrl: "https://github.com/thisispivi/Resume",
-  // },
+  {
+    url: "https://resume.pivi.dev/",
+    imageUrl:
+      "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Resume_small.png",
+    key: "resume",
+    pillColor: "#fc8b59",
+    pillKey: "projects",
+    githubUrl: "https://github.com/thisispivi/Resume",
+  },
   {
     url: "https://linktree.pivi.dev/",
     imageUrl:
