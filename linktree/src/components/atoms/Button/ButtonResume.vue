@@ -18,9 +18,9 @@ const resumeUrl = `https://github.com/thisispivi/LinkTree/blob/main/resume/Andre
 @use "../../../styles/mixins.scss" as m;
 .btn--resume {
   svg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.75;
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0.6;
     stroke: v.$linkButtonsIconColor !important;
     @include m.transition(all, 0.2s, ease-in-out);
   }

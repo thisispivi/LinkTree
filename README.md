@@ -10,47 +10,48 @@
 
 # [LinkTree](https://linktree.pivi.dev/)
 
-LinkTree is a web application designed to showcase all my links in one place. It provides a user-friendly interface where users can access different social media profiles and other important links. The application is built using Vue 3 and TypeScript, ensuring a modern and efficient development experience. It includes various components such as buttons for different social media platforms, a profile section, and a project showcase. The app also supports multiple languages through the use of the vue-i18n library. The project is available at this [link](https://linktree.pivi.dev/).
+A personal portfolio and link aggregator built with Vue 3, TypeScript, and GSAP. Features a dark-themed UI with gradient accents, 3D card interactions, scroll-triggered animations, and i18n support (English/Italian).
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![pnpm](https://img.shields.io/badge/pnpm-%23CB3837.svg?style=for-the-badge&logo=pnpm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+## Tech Stack
+
+- **Framework**: Vue 3 (Composition API + `<script setup>`)
+- **Language**: TypeScript
+- **Styling**: SCSS with design tokens (variables/mixins)
+- **Animations**: GSAP + ScrollTrigger
+- **Fonts**: Plus Jakarta Sans (body), Playfair Display (headings)
+- **i18n**: vue-i18n (EN/IT)
+- **Build**: Vite
+- **Package Manager**: pnpm
 
 ## Project Structure
 
 ```text
 .
-├── logos
-└── linktree
+├── logos/              # Brand assets
+└── linktree/           # Vue 3 app
+    └── src/
+        ├── assets/     # SVG icons and flag images
+        ├── components/ # Atomic design (atoms → molecules → organisms → templates → pages)
+        ├── data/       # Project data definitions
+        ├── i18n/       # Locale files (en, it)
+        ├── router/     # Vue Router config
+        └── styles/     # SCSS variables, mixins, global styles
 ```
 
-- `logos`: Contains all the assets used in the app.
-- `linktree`: Contains the Vue 3 web app.
+## Getting Started
 
-## How to Use
+```bash
+git clone https://github.com/thisispivi/LinkTree.git
+cd linktree
+pnpm i
+pnpm dev
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/thisispivi/LinkTree.git
-   ```
-2. Navigate to the `linktree` folder:
-   ```bash
-   cd linktree
-   ```
-3. Install the dependencies:
-   ```bash
-   pnpm i
-   ```
-4. Run the app:
-   ```bash
-   pnpm dev
-   ```
+## Deployment
 
-## How to Deploy
-
-1. Navigate to the `linktree` folder:
-   ```bash
-   cd linktree
-   ```
-2. Run the deploy command:
-   ```bash
-   pnpm run deploygh
-   ```
+```bash
+cd linktree
+pnpm run deploygh
+```

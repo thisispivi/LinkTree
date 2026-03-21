@@ -18,9 +18,9 @@ const youtubeUrl = "https://www.youtube.com/@andreapiras4885";
 .btn--youtube {
   svg {
     fill: v.$linkButtonsIconColor;
-    width: 100%;
-    height: 100%;
-    opacity: 0.75;
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0.6;
     @include m.transition(all, 0.2s, ease-in-out);
   }
   &:hover {

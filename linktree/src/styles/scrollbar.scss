@@ -2,14 +2,11 @@
 @use "./mixins.scss" as m;
 
 ::-webkit-scrollbar {
-  background-color: v.$background;
-  width: 0.8rem;
-  @include m.transition(all, 0.2s, ease-in-out);
-  display: none;
+  background-color: transparent;
+  width: 0.35rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(v.$pink, v.$orange);
   border-radius: 1rem;
-  border: 0.2rem solid v.$background;
 }

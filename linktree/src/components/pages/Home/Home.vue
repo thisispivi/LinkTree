@@ -26,6 +26,11 @@ import { Base } from "../../templates";
   background: v.$backgroundGradient;
   color: v.$fontColor;
   isolation: isolate;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .content {
     position: relative;

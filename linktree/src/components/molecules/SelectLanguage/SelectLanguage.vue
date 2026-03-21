@@ -54,9 +54,7 @@ const onLanguageClick = (lang: "en" | "it") => {
 @use "../../../styles/mixins.scss" as m;
 
 .select-language {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: relative;
   background-color: transparent;
   color: white;
   border: none;
@@ -71,13 +69,13 @@ const onLanguageClick = (lang: "en" | "it") => {
     display: flex;
     align-items: center;
     svg {
-      width: 2rem;
-      height: 2rem;
-      margin-right: 0.3rem;
-    }
-    .select-language__button__chevron {
       width: 1.5rem;
       height: 1.5rem;
+      margin-right: 0.2rem;
+    }
+    .select-language__button__chevron {
+      width: 1rem;
+      height: 1rem;
       stroke: v.$fontColor;
       margin: 0;
       @include m.transition(transform, 0.18s, ease);
@@ -87,11 +85,11 @@ const onLanguageClick = (lang: "en" | "it") => {
     position: absolute;
     top: 2.5rem;
     right: 0;
-    background-color: v.$background;
+    background-color: v.$surface-0;
     backdrop-filter: blur(4rem);
     -webkit-backdrop-filter: blur(4rem);
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.188rem 0.188rem 0rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.4);
     padding: 0.5rem;
     will-change: transform, opacity;
     contain: paint;
@@ -103,7 +101,7 @@ const onLanguageClick = (lang: "en" | "it") => {
       border-radius: 0.5rem;
       @include m.transition(all, 0.2s);
       &:hover {
-        background-color: v.$cardBackground;
+        background-color: v.$surface-2;
       }
       &.active {
         background-color: v.$orange;
@@ -114,12 +112,13 @@ const onLanguageClick = (lang: "en" | "it") => {
         }
       }
       svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.75rem;
       }
       p {
         font-weight: 500;
+        font-size: 0.85rem;
       }
     }
   }

@@ -1,5 +1,6 @@
 {
   "projects": {
+    "sectionTitle": "Selected Work",
     "syrto": {
       "title": "Syrto",
       "description": "Syrto® is an advanced platform for identifying business opportunities, managing risks, and predicting the performance of clients and suppliers. It integrates neural networks and machine learning with financial expertise, offering a comprehensive solution for decision-making."
@@ -30,5 +31,6 @@
   },
   "more": "More",
   "less": "Less",
-  "contactMe": "Contact Me"
+  "contactMe": "Contact Me",
+  "viewProject": "View Project"
 }

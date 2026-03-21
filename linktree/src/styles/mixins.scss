@@ -1,3 +1,24 @@
+@use "./variables.scss" as v;
+
 @mixin transition($property: all, $duration: 0.2s, $timing-function: ease-in-out) {
   transition: $property $duration $timing-function;
+}
+
+@mixin glass-surface($radius: 0.75rem) {
+  background: v.$glass-bg;
+  backdrop-filter: blur(v.$glass-blur);
+  -webkit-backdrop-filter: blur(v.$glass-blur);
+  box-shadow: inset 0 0.0625rem 0 rgba(255, 255, 255, 0.06);
+  border-radius: $radius;
+}
+
+@mixin text-gradient {
+  background: v.$gradient-pink-orange;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin section-padding {
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
 }

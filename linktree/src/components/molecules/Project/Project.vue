@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from "vue";
+
 import { Project } from "../../../data/projects";
 import { Pill } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
@@ -7,34 +9,119 @@ const { project } = defineProps({
   project: { type: Object as () => Project, required: true },
 });
 
-const openProject = () => {
-  window.open(project.url, "_blank");
-};
+const cardRef = ref<HTMLElement | null>(null);
+const glareRef = ref<HTMLElement | null>(null);
+const descRef = ref<HTMLElement | null>(null);
+const expanded = ref(false);
+const isOverflow = ref(false);
+let bounds: DOMRect | null = null;
+let rafId = 0;
+let ro: ResizeObserver | null = null;
+
+function checkOverflow() {
+  if (!descRef.value) return;
+  isOverflow.value = descRef.value.scrollHeight > descRef.value.clientHeight;
+}
+
+onMounted(() => {
+  checkOverflow();
+  ro = new ResizeObserver(checkOverflow);
+  if (descRef.value) ro.observe(descRef.value);
+});
+
+function onMouseEnter() {
+  if (!cardRef.value) return;
+  bounds = cardRef.value.getBoundingClientRect();
+}
+
+function onMouseMove(e: MouseEvent) {
+  if (!bounds || !cardRef.value) return;
+  cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(() => {
+    if (!bounds || !cardRef.value) return;
+    const x = e.clientX - bounds.left;
+    const y = e.clientY - bounds.top;
+    const midX = bounds.width / 2;
+    const midY = bounds.height / 2;
+    cardRef.value.style.transform = `perspective(50rem) rotateX(${((midY - y) / midY) * 3}deg) rotateY(${((x - midX) / midX) * 3}deg) scale3d(1.01, 1.01, 1.01)`;
+    if (glareRef.value) {
+      glareRef.value.style.background = `radial-gradient(circle at ${(x / bounds.width) * 100}% ${(y / bounds.height) * 100}%, rgba(255,255,255,0.06) 0%, transparent 60%)`;
+      glareRef.value.style.opacity = "1";
+    }
+  });
+}
+
+function onMouseLeave() {
+  cancelAnimationFrame(rafId);
+  bounds = null;
+  if (cardRef.value)
+    cardRef.value.style.transform =
+      "perspective(50rem) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+  if (glareRef.value) glareRef.value.style.opacity = "0";
+}
+
+function toggleExpand(e: Event) {
+  e.stopPropagation();
+  expanded.value = !expanded.value;
+  // re-check after expansion collapses back
+  if (!expanded.value) setTimeout(checkOverflow, 420);
+}
+
+const openProject = () => window.open(project.url, "_blank");
+
+onBeforeUnmount(() => {
+  cancelAnimationFrame(rafId);
+  ro?.disconnect();
+});
 </script>
 
 <template>
-  <div class="project" @click="openProject">
-    <img :src="project.imageUrl" alt="image" class="image" />
-    <div class="metadata">
-      <div class="title__area">
-        <div class="title">
-          <h3>{{ $t(`projects.${project.key}.title`) }}</h3>
-          <ButtonGithub
-            v-if="project.githubUrl"
-            :github-url="project.githubUrl"
-          />
-        </div>
+  <article
+    ref="cardRef"
+    class="project"
+    :style="{ '--pill-color': project.pillColor }"
+    @mouseenter="onMouseEnter"
+    @mousemove="onMouseMove"
+    @mouseleave="onMouseLeave"
+    @click="openProject"
+  >
+    <div ref="glareRef" class="project__glare"></div>
+    <div class="project__preview">
+      <img :src="project.imageUrl" alt="image" class="project__image" />
+      <div class="project__overlay">
+        <span class="project__open">{{ $t("viewProject") }} &rarr;</span>
+      </div>
+    </div>
+    <div class="project__info">
+      <div class="project__head">
         <Pill :color="project.pillColor">
           <p>{{ $t(`categories.${project.pillKey}`) }}</p>
         </Pill>
+        <ButtonGithub
+          v-if="project.githubUrl"
+          :github-url="project.githubUrl"
+          class="project__github"
+        />
       </div>
-      <div class="description">
-        <p>
-          {{ $t(`projects.${project.key}.description`) }}
-        </p>
-      </div>
+      <h3 class="project__title">
+        {{ $t(`projects.${project.key}.title`) }}
+      </h3>
+      <p
+        ref="descRef"
+        class="project__desc"
+        :class="{ 'project__desc--expanded': expanded }"
+      >
+        {{ $t(`projects.${project.key}.description`) }}
+      </p>
+      <button
+        v-if="isOverflow || expanded"
+        class="project__toggle"
+        @click="toggleExpand"
+      >
+        {{ expanded ? $t("less") : $t("more") }}
+      </button>
     </div>
-  </div>
+  </article>
 </template>
 
 <style lang="scss">
@@ -42,112 +129,162 @@ const openProject = () => {
 @use "../../../styles/mixins.scss" as m;
 
 .project {
-  margin: auto;
-  display: flex;
-  padding: 1rem;
-  $borderRadius: 1rem;
-  border-radius: $borderRadius;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
   overflow: hidden;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(
-    135deg,
-    rgba(60, 60, 60, 0.45),
-    rgba(10, 10, 20, 0.54)
-  );
-  box-shadow:
-    0 0.625rem 1.875rem rgba(0, 0, 0, 0.22),
-    inset 0 0.0625rem 0.0625rem rgba(255, 255, 255, 0.24);
+  background: v.$surface-1;
   cursor: pointer;
-  margin-bottom: auto;
-  max-width: 55rem;
-  column-gap: 1rem;
-  width: 100%;
-  @include m.transition(transform, 0.25s);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.04);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.25s ease-out,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 
-  .media {
-    position: relative;
-    flex: 0;
+  &:hover {
+    background: v.$surface-2;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 1rem 3rem rgba(0, 0, 0, 0.35),
+      0 0 1.5rem rgba(v.$pink, 0.06);
 
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 0.5rem;
-      background: radial-gradient(
-        6rem 6rem at 50% 50%,
-        rgba(v.$pink, 0.14),
-        rgba(v.$orange, 0.1) 40%,
-        transparent 70%
-      );
-      filter: blur(1rem);
-      z-index: 0;
+    .project__overlay {
+      opacity: 1;
+    }
+
+    .project__title {
+      color: var(--pill-color);
+      -webkit-text-fill-color: var(--pill-color);
     }
   }
 
-  .image {
-    aspect-ratio: 1920 / 1080;
-    flex: 0;
-    height: 13rem;
-    border-radius: 0.5rem;
+  .project__glare {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    mix-blend-mode: overlay;
   }
 
-  .metadata {
-    display: flex;
-    flex-direction: column;
+  .project__preview {
+    position: relative;
+    overflow: hidden;
+    margin: 0.6rem 0.6rem 0;
+    border-radius: 0.6rem;
+    background: #131313;
+  }
 
-    .title__area {
+  .project__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.6rem;
+  }
+
+  .project__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.6rem;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+
+    .project__open {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: v.$on-surface;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(0.5rem);
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .project__info {
+    padding: 1rem 1.25rem 1.25rem;
+
+    .project__head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.75rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      width: 100%;
-      .title {
-        display: flex;
-        align-items: center;
-        h3 {
-          margin: 0;
-          font-size: 1.5rem;
-          color: v.$lightPurple;
-          background: -webkit-linear-gradient(270deg, v.$pink, v.$orange);
-          filter: brightness(1.4);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-family: "Raleway", sans-serif;
+      margin-bottom: 0.6rem;
+
+      .project__github {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: transparent;
+        box-shadow: none;
+
+        svg {
+          width: 1rem;
+          height: 1rem;
         }
-        .btn--github {
-          width: 1.2rem;
-          height: 1.2rem;
-          margin-left: 0.5rem;
-          svg {
-            fill: v.$fontColor;
-          }
+        &:hover {
+          background: transparent;
+          box-shadow: none;
         }
       }
     }
 
-    .description {
-      p {
-        color: v.$fontColor;
-        opacity: 0.9;
-        line-height: 1.6;
-        font-weight: 300;
+    .project__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: v.$on-surface;
+      -webkit-text-fill-color: v.$on-surface;
+      margin-bottom: 0.35rem;
+      transition:
+        color 0.3s ease,
+        -webkit-text-fill-color 0.3s ease;
+    }
+
+    .project__desc {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: v.$on-surface-variant;
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: all 0.4s ease;
+
+      &--expanded {
+        -webkit-line-clamp: unset;
+        overflow: visible;
       }
     }
-  }
-}
 
-@media screen and (max-width: 55.625rem) {
-  .project {
-    flex-direction: column;
-    width: min(100%, 25rem);
-    .image {
-      height: 16rem;
-      border-radius: 0.5rem;
-      margin-bottom: 0.8rem;
+    .project__toggle {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 0.5rem;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      @include m.text-gradient;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

@@ -1,26 +1,52 @@
 @use "sass:color";
 
-$background: #262626;
-$backgroundHover: #283341;
-$bgStart: #121212;
-$bgEnd: #0f0f0f;
+// Font
+$font-family: "Plus Jakarta Sans", sans-serif;
+
+// Background
+$background: #0e0e0e;
+$bgStart: #0e0e0e;
+$bgEnd: #0a0a0a;
 $backgroundGradient: linear-gradient(180deg, $bgStart 0%, $bgEnd 100%);
 
-$fontColor: #f1f1f1;
+// Surface hierarchy (tonal layering)
+$surface-0: #0e0e0e;
+$surface-1: rgba(255, 255, 255, 0.04);
+$surface-2: rgba(255, 255, 255, 0.07);
+$surface-3: rgba(255, 255, 255, 0.10);
 
+// Text hierarchy
+$fontColor: #f1f1f1;
+$on-surface: #f1f1f1;
+$on-surface-variant: rgba(241, 241, 241, 0.65);
+$on-surface-muted: rgba(241, 241, 241, 0.4);
+
+// Accent colors
 $pink: #eb3678;
+$orange: #fb773c;
+$gradient-pink-orange: linear-gradient(135deg, $pink, $orange);
+
+// Bubble colors
 $bubblePinkFrom: color.adjust($pink, $lightness: 4%);
 $bubbleGlowPink: rgba($pink, 0.12);
 $bubblePinkTo: rgba($pink, 0.22);
 
-$orange: #fb773c;
 $bubbleOrangeFrom: color.adjust($orange, $lightness: 4%);
 $bubbleOrangeTo: rgba($orange, 0.22);
 $bubbleGlowOrange: rgba($orange, 0.12);
 
 $lightPurple: #c7b2f9;
 
+// Icon & UI
 $linkButtonsIconColor: #f1f1f1;
-
 $cardBackground: rgba(255, 255, 255, 0.1);
 $cardBackgroundHover: rgba(255, 255, 255, 0.17);
+
+// Glassmorphism
+$glass-bg: rgba(255, 255, 255, 0.06);
+$glass-border: rgba(255, 255, 255, 0.08);
+$glass-blur: 2rem;
+
+// Spacing
+$section-gap: 8rem;
+$content-max-width: 48rem;

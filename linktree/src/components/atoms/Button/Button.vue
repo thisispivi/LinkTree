@@ -28,17 +28,27 @@ export default {
 @use "../../../styles/mixins.scss" as m;
 
 .btn {
-  background-color: transparent;
+  background: v.$glass-bg;
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5rem;
+  border-radius: 0.75rem;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
-  @include m.transition;
+  width: 2.75rem;
+  height: 2.75rem;
+  box-shadow: inset 0 0.0625rem 0 rgba(255, 255, 255, 0.06);
+  @include m.transition(all, 0.3s, ease);
+
+  &:hover {
+    background: v.$surface-3;
+    box-shadow:
+      inset 0 0.0625rem 0 rgba(255, 255, 255, 0.06),
+      0 0 1.5rem rgba(v.$pink, 0.15);
+  }
 }
 
 .btn:disabled {

@@ -1,5 +1,6 @@
 {
   "projects": {
+    "sectionTitle": "I miei progetti",
     "syrto": {
       "title": "Syrto",
       "description": "Syrto® è una piattaforma avanzata per individuare opportunità di business, gestire i rischi e prevedere le prestazioni di clienti e fornitori. Integra reti neurali e machine learning con competenze finanziarie, offrendo una soluzione completa per il decision-making."
@@ -30,5 +31,6 @@
   },
   "more": "Altro",
   "less": "Meno",
-  "contactMe": "Contattami"
+  "contactMe": "Contattami",
+  "viewProject": "Vedi Progetto"
 }

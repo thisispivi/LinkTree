@@ -1,18 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 
-/**
- * Bubble configuration
- * @property {number} relX - Center X as fraction of viewport width (0–1)
- * @property {number} relY - Center Y as fraction of viewport height (0-1)
- * @property {number} radiusX - Horizontal radius in CSS px
- * @property {number} radiusY - Vertical radius in CSS px
- * @property {number} ampX - Horizontal travel amplitude as fraction of viewport width
- * @property {number} ampY - Vertical travel amplitude as fraction of viewport height
- * @property {number} period - Full-cycle period in seconds
- * @property {number} phase - Phase offset in radians
- * @property {"pink" | "orange"} color - Color theme
- */
 interface BubbleConfig {
   relX: number;
   relY: number;
@@ -32,13 +20,13 @@ interface Bubble extends BubbleConfig {
 
 const COLORS = {
   pink: {
-    from: "rgba(235, 54, 120, 0.7)",
-    mid: "rgba(235, 54, 120, 0.3)",
+    from: "rgba(235, 54, 120, 0.5)",
+    mid: "rgba(235, 54, 120, 0.2)",
     to: "rgba(235, 54, 120, 0.0)",
   },
   orange: {
-    from: "rgba(251, 119, 60, 0.7)",
-    mid: "rgba(251, 119, 60, 0.3)",
+    from: "rgba(251, 119, 60, 0.5)",
+    mid: "rgba(251, 119, 60, 0.2)",
     to: "rgba(251, 119, 60, 0.0)",
   },
 } as const;
@@ -46,67 +34,67 @@ const COLORS = {
 const BUBBLE_CONFIGS: BubbleConfig[] = [
   {
     relX: 0.2,
-    relY: 0.2,
+    relY: 0.12,
     radiusX: 440,
     radiusY: 380,
     ampX: 0.15,
-    ampY: 0.15,
-    period: 40,
+    ampY: 0.12,
+    period: 52,
     phase: 0,
     color: "orange",
   },
   {
     relX: 0.8,
-    relY: 0.25,
+    relY: 0.18,
     radiusX: 400,
     radiusY: 340,
     ampX: 0.15,
-    ampY: 0.18,
-    period: 38,
+    ampY: 0.15,
+    period: 50,
     phase: 2.6,
     color: "pink",
   },
   {
     relX: 0.5,
-    relY: 0.5,
+    relY: 0.35,
     radiusX: 420,
     radiusY: 360,
     ampX: 0.2,
-    ampY: 0.2,
-    period: 42,
+    ampY: 0.18,
+    period: 55,
     phase: 4.2,
     color: "pink",
   },
   {
     relX: 0.15,
-    relY: 0.75,
+    relY: 0.55,
     radiusX: 380,
     radiusY: 320,
     ampX: 0.18,
-    ampY: 0.15,
-    period: 36,
+    ampY: 0.12,
+    period: 47,
     phase: 1.3,
     color: "pink",
   },
   {
     relX: 0.75,
-    relY: 0.7,
+    relY: 0.45,
     radiusX: 360,
     radiusY: 300,
     ampX: 0.15,
-    ampY: 0.18,
-    period: 44,
+    ampY: 0.15,
+    period: 57,
     phase: 3.8,
     color: "orange",
   },
   {
     relX: 0.45,
-    relY: 0.15,
+    relY: 0.08,
     radiusX: 350,
     radiusY: 280,
     ampX: 0.2,
-    ampY: 0.12,
-    period: 46,
+    ampY: 0.1,
+    period: 60,
     phase: 5.5,
     color: "orange",
   },
@@ -128,7 +116,6 @@ let lastFrameTime = 0;
 let startTime = 0;
 let isReducedMotion = false;
 
-/** Scale factor for bubble radii — 1.0 at desktop (1024px+), scales down proportionally */
 const DESKTOP_REF = 1024;
 function getScale(): number {
   const vMin = Math.min(width, height);
@@ -187,7 +174,7 @@ function draw(): void {
   ctx.clearRect(0, 0, width * dpr, height * dpr);
   ctx.save();
   ctx.scale(dpr, dpr);
-  ctx.globalAlpha = 0.75;
+  ctx.globalAlpha = 0.55;
   ctx.globalCompositeOperation = "source-over";
   for (const b of bubbles) drawBubble(b);
   ctx.restore();
@@ -215,7 +202,7 @@ function handleResize(): void {
   el.height = height * dpr;
 
   const s = getScale();
-  el.style.filter = `blur(${Math.round(40 * s)}px)`;
+  el.style.filter = `blur(${Math.round(60 * s)}px)`;
 
   initBubbles();
   if (isReducedMotion) draw();
@@ -262,6 +249,6 @@ onUnmounted(() => {
   z-index: 0;
   pointer-events: none;
   mix-blend-mode: screen;
-  filter: blur(40px);
+  filter: blur(3.75rem);
 }
 </style>
