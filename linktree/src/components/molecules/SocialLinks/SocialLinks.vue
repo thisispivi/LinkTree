@@ -4,7 +4,6 @@ import {
   ButtonInstagram,
   ButtonLinkedIn,
   ButtonResume,
-  ButtonSkype,
   ButtonX,
   ButtonYoutube,
 } from "../../atoms";
@@ -16,7 +15,6 @@ import {
     <ButtonGithub />
     <ButtonInstagram />
     <ButtonLinkedIn />
-    <ButtonSkype />
     <ButtonX />
     <ButtonYoutube />
   </div>

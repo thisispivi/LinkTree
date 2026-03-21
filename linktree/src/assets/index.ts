@@ -9,7 +9,6 @@ import InstagramIcon from "./icons/Instagram.svg";
 import LinkedInIcon from "./icons/LinkedIn.svg";
 import MailIcon from "./icons/Mail.svg";
 import ResumeIcon from "./icons/Resume.svg";
-import SkypeIcon from "./icons/Skype.svg";
 import XIcon from "./icons/X.svg";
 import YoutubeIcon from "./icons/Youtube.svg";
 
@@ -21,7 +20,6 @@ export {
   LinkedInIcon,
   MailIcon,
   ResumeIcon,
-  SkypeIcon,
   XIcon,
   YoutubeIcon,
 };

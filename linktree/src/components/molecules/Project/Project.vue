@@ -257,12 +257,14 @@ onBeforeUnmount(() => {
       line-height: 1.55;
       display: -webkit-box;
       -webkit-line-clamp: 3;
+      line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
       transition: all 0.4s ease;
 
       &--expanded {
         -webkit-line-clamp: unset;
+        line-clamp: unset;
         overflow: visible;
       }
     }

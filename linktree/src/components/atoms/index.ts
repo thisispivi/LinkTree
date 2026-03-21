@@ -5,7 +5,6 @@ import ButtonGithub from "./Button/ButtonGithub.vue";
 import ButtonInstagram from "./Button/ButtonInstagram.vue";
 import ButtonLinkedIn from "./Button/ButtonLinkedIn.vue";
 import ButtonResume from "./Button/ButtonResume.vue";
-import ButtonSkype from "./Button/ButtonSkype.vue";
 import ButtonX from "./Button/ButtonX.vue";
 import ButtonYoutube from "./Button/ButtonYoutube.vue";
 export {
@@ -16,7 +15,6 @@ export {
   ButtonInstagram,
   ButtonLinkedIn,
   ButtonResume,
-  ButtonSkype,
   ButtonX,
   ButtonYoutube,
 };
