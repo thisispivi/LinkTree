@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
 import { Project } from "../../../data/projects";
+import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Pill } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
 
@@ -63,11 +64,10 @@ function onMouseLeave() {
 function toggleExpand(e: Event) {
   e.stopPropagation();
   expanded.value = !expanded.value;
-  // re-check after expansion collapses back
   if (!expanded.value) setTimeout(checkOverflow, 420);
 }
 
-const openProject = () => window.open(project.url, "_blank");
+const openProject = () => openExternalUrl(project.url);
 
 onBeforeUnmount(() => {
   cancelAnimationFrame(rafId);

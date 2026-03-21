@@ -6,9 +6,10 @@
 
 <script lang="ts" setup>
 import { SkypeIcon } from "../../../assets";
+import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Button } from "..";
 
-const openLink = (url: string) => window.open(url, "_blank");
+const openLink = (url: string) => openExternalUrl(url);
 const skypeUrl = "https://join.skype.com/invite/ATdDavVvAdtT";
 </script>
 

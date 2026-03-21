@@ -7,9 +7,10 @@
 <script lang="ts" setup>
 import { ResumeIcon } from "../../../assets";
 import i18n from "../../../i18n";
+import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Button } from "..";
 
-const openLink = (url: string) => window.open(url, "_blank");
+const openLink = (url: string) => openExternalUrl(url);
 const resumeUrl = `https://github.com/thisispivi/LinkTree/blob/main/resume/Andrea_Piras_Resume_${i18n.global.locale.toUpperCase().slice(0, 2)}.pdf`;
 </script>
 

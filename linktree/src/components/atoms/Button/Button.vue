@@ -1,25 +1,31 @@
 <template>
-  <button :class="buttonClass" :disabled="disabled" @click="onClick">
+  <button
+    :type="type"
+    :class="buttonClass"
+    :disabled="disabled"
+    @click="onClick"
+  >
     <slot />
   </button>
 </template>
 
-<script>
-export default {
-  name: "Button",
-  props: {
-    type: { type: String, default: "button" },
-    disabled: { type: Boolean, default: false },
-    buttonClass: { type: String, default: "btn" },
-  },
-  emits: ["click"],
-  methods: {
-    onClick() {
-      if (!this.disabled) {
-        this.$emit("click");
-      }
-    },
-  },
+<script setup lang="ts">
+type ButtonType = "button" | "submit" | "reset";
+
+const { buttonClass, disabled, type } = defineProps({
+  type: { type: String as () => ButtonType, default: "button" },
+  disabled: { type: Boolean, default: false },
+  buttonClass: { type: String, default: "btn" },
+});
+
+const emit = defineEmits<{
+  click: [];
+}>();
+
+const onClick = () => {
+  if (!disabled) {
+    emit("click");
+  }
 };
 </script>
 

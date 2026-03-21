@@ -3,21 +3,14 @@ import gsap from "gsap";
 import { nextTick, onMounted, ref } from "vue";
 
 import { MailIcon } from "../../../assets";
-import {
-  ButtonGithub,
-  ButtonInstagram,
-  ButtonLinkedIn,
-  ButtonSkype,
-  ButtonX,
-  ButtonYoutube,
-  Profile,
-} from "../../atoms";
-import ButtonResume from "../../atoms/Button/ButtonResume.vue";
+import { openExternalUrl } from "../../../utils/openExternalUrl";
+import { Profile } from "../../atoms";
+import { SocialLinks } from "../../molecules";
 
 const heroRef = ref<HTMLElement | null>(null);
 
 const onContact = () => {
-  window.open("mailto:andreapiras2809@gmail.com");
+  openExternalUrl("mailto:andreapiras2809@gmail.com");
 };
 
 onMounted(async () => {
@@ -87,15 +80,7 @@ onMounted(async () => {
         {{ $t("header.description") }}
       </p>
     </div>
-    <div class="hero__socials">
-      <ButtonResume />
-      <ButtonGithub />
-      <ButtonInstagram />
-      <ButtonLinkedIn />
-      <ButtonSkype />
-      <ButtonX />
-      <ButtonYoutube />
-    </div>
+    <SocialLinks class="hero__socials" />
     <button class="hero__contact" @click="onContact">
       <span class="hero__contact-glow" aria-hidden="true"></span>
       <span class="hero__contact-inner">
@@ -199,13 +184,6 @@ onMounted(async () => {
     text-align: center;
     line-height: 1.6;
     margin-top: 0.5rem;
-  }
-
-  .hero__socials {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .hero__contact {

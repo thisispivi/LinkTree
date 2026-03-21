@@ -6,13 +6,14 @@
 
 <script lang="ts" setup>
 import { GithubIcon } from "../../../assets";
+import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Button } from "../../atoms";
 
 const { githubUrl } = defineProps({
   githubUrl: { type: String, default: "https://github.com/thisispivi" },
 });
 
-const openLink = (url: string) => window.open(url, "_blank");
+const openLink = (url: string) => openExternalUrl(url);
 </script>
 
 <style lang="scss" scoped>

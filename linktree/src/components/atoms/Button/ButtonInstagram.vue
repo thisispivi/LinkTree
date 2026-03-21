@@ -6,9 +6,10 @@
 
 <script lang="ts" setup>
 import { InstagramIcon } from "../../../assets";
+import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Button } from "..";
 
-const openLink = (url: string) => window.open(url, "_blank");
+const openLink = (url: string) => openExternalUrl(url);
 const instagramUrl = "https://www.instagram.com/pi_waitforit_vi/";
 </script>
 
