@@ -1,6 +1,5 @@
 import BubbleBackground from "./BubbleBackground/BubbleBackground.vue";
 import Button from "./Button/Button.vue";
-import ButtonFacebook from "./Button/ButtonFacebook.vue";
 import ButtonGithub from "./Button/ButtonGithub.vue";
 import ButtonInstagram from "./Button/ButtonInstagram.vue";
 import ButtonLinkedIn from "./Button/ButtonLinkedIn.vue";
@@ -10,7 +9,6 @@ import ButtonYoutube from "./Button/ButtonYoutube.vue";
 export {
   BubbleBackground,
   Button,
-  ButtonFacebook,
   ButtonGithub,
   ButtonInstagram,
   ButtonLinkedIn,
