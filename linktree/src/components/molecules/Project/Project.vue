@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
-import { Project } from "../../../data/projects";
+import { CategoryColor, Project } from "../../../data/projects";
 import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Pill } from "../../atoms";
 import ButtonGithub from "../../atoms/Button/ButtonGithub.vue";
@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
   <article
     ref="cardRef"
     class="project"
-    :style="{ '--pill-color': project.pillColor }"
+    :style="{ '--pill-color': CategoryColor[project.pillKeys[0]] }"
     @mouseenter="onMouseEnter"
     @mousemove="onMouseMove"
     @mouseleave="onMouseLeave"
@@ -94,9 +94,15 @@ onBeforeUnmount(() => {
     </div>
     <div class="project__info">
       <div class="project__head">
-        <Pill :color="project.pillColor">
-          <p>{{ $t(`categories.${project.pillKey}`) }}</p>
-        </Pill>
+        <div class="project__pills">
+          <Pill
+            v-for="category in project.pillKeys"
+            :key="category"
+            :color="CategoryColor[category]"
+          >
+            <p>{{ $t(`categories.${category}`) }}</p>
+          </Pill>
+        </div>
         <ButtonGithub
           v-if="project.githubUrl"
           :github-url="project.githubUrl"
@@ -221,6 +227,12 @@ onBeforeUnmount(() => {
       align-items: center;
       justify-content: space-between;
       margin-bottom: 0.6rem;
+
+      .project__pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
 
       .project__github {
         width: 1.5rem;

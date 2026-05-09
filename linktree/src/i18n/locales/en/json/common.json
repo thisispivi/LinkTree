@@ -20,11 +20,16 @@
     "resume": {
       "title": "Resume Builder",
       "description": "A modern, customizable resume builder web app that lets you create professional resumes with multiple templates, color palettes, fonts, and multilingual support. Edit your data via forms or JSON, or forms then export to PDF. Created because I needed to write my CV"
+    },
+    "jellyfinSleepGuard": {
+      "title": "Jellyfin Sleep Guard",
+      "description": "A plugin for Jellyfin that automatically stops playback if no interaction is detected for a certain amount of time, preventing your entire season from playing while you're asleep."
     }
   },
   "categories": {
     "work": "Work",
-    "projects": "Projects"
+    "projects": "Projects",
+    "aiGenerated": "AI Generated"
   },
   "header": {
     "description": "Full Stack Developer and Machine Learning Consultant"
