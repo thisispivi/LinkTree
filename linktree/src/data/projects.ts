@@ -37,6 +37,14 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/thisispivi/TravelMap",
   },
   {
+    url: "https://carsmanager.pivi.dev/",
+    imageUrl:
+      "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/CarsManager_small.png",
+    key: "carsManager",
+    pillKeys: [CategoryType.PROJECTS, CategoryType.AI_GENERATED],
+    githubUrl: "https://github.com/thisispivi/CarsManager",
+  },
+  {
     url: "https://tennisdle.pivi.dev/",
     imageUrl:
       "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Tennisdle_small.png",

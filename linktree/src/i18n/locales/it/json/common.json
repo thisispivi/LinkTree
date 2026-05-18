@@ -24,6 +24,10 @@
     "jellyfinSleepGuard": {
       "title": "Jellyfin Sleep Guard",
       "description": "Un plugin per Jellyfin che interrompe automaticamente la riproduzione se non viene rilevata alcuna interazione per un certo lasso di tempo, evitando che l'intera stagione venga riprodotta mentre stai dormendo."
+    },
+    "carsManager": {
+      "title": "Cars Manager",
+      "description": "Cars Manager è un'app local-first per la gestione completa dei propri veicoli. Permette di tenere organizzati rifornimenti, manutenzioni, assicurazioni, tasse, riparazioni, multe, promemoria e costi di possesso, offrendo dashboard, analisi, grafici, ricerca ed esportazione CSV all'interno di un'esperienza Flutter responsive e multipiattaforma."
     }
   },
   "categories": {
