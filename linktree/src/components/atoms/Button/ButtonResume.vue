@@ -1,5 +1,5 @@
 <template>
-  <Button class="btn btn--resume" @click="openLink(resumeUrl)">
+  <Button class="btn btn--resume" @click="openResume">
     <ResumeIcon />
   </Button>
 </template>
@@ -10,8 +10,12 @@ import i18n from "../../../i18n";
 import { openExternalUrl } from "../../../utils/openExternalUrl";
 import { Button } from "..";
 
-const openLink = (url: string) => openExternalUrl(url);
-const resumeUrl = `https://github.com/thisispivi/LinkTree/blob/main/resume/Andrea_Piras_Resume_${i18n.global.locale.toUpperCase().slice(0, 2)}.pdf`;
+const openResume = () => {
+  const locale = i18n.global.locale.toUpperCase().slice(0, 2);
+  openExternalUrl(
+    `https://github.com/thisispivi/LinkTree/blob/main/resume/Andrea_Piras_Resume_${locale}.pdf`
+  );
+};
 </script>
 
 <style lang="scss" scoped>
