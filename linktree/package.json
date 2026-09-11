@@ -15,8 +15,7 @@
     "lint:fix": "eslint src --fix",
     "predeploygh": "pnpm run build",
     "deploygh": "gh-pages -d dist",
-    "update:packages": "ncu -u",
-    "depcheck": "depcheck --ignores=prettier"
+    "update:packages": "ncu -u"
   },
   "dependencies": {
     "autoprefixer": "^10.5.6",
@@ -39,6 +38,7 @@
     "husky": "^9.1.7",
     "knip": "^6.35.1",
     "lint-staged": "^17.5.1",
+    "npm-check-updates": "^23.1.0",
     "prettier": "^3.9.6",
     "sass": "^1.104.0",
     "typescript": "^6.0.3",

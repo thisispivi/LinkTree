@@ -42,16 +42,32 @@ A personal portfolio and link aggregator built with Vue 3, TypeScript, and GSAP.
 
 ## Getting Started
 
+Requires Node.js and [pnpm](https://pnpm.io/installation).
+
 ```bash
 git clone https://github.com/thisispivi/LinkTree.git
-cd linktree
-pnpm i
+cd LinkTree/linktree
+pnpm install
 pnpm dev
 ```
+
+## Maintenance
+
+Run the project checks from the `linktree` directory:
+
+```bash
+pnpm lint
+pnpm knip
+pnpm build
+```
+
+To update dependencies, run `pnpm update:packages`, review the changes, and then
+run `pnpm install`. npm-check-updates is configured to leave TypeScript on its
+current version.
 
 ## Deployment
 
 ```bash
 cd linktree
-pnpm run deploygh
+pnpm deploygh
 ```

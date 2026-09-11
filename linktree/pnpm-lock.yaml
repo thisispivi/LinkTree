@@ -63,6 +63,9 @@ importers:
       lint-staged:
         specifier: ^17.5.1
         version: 17.5.1
+      npm-check-updates:
+        specifier: ^23.1.0
+        version: 23.1.0
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
@@ -1421,6 +1424,11 @@ packages:
 
   nostics@1.2.0:
     resolution: {integrity: sha512-FGqEfhQjrvo1lL8KFifdTQiNwwQHJxC1jtYE1Rc54qF/jxONUNL+kC9gS1krX8Q65PgrQ5fCqH/I4NhWBvdSqg==}
+
+  npm-check-updates@23.1.0:
+    resolution: {integrity: sha512-u6Odx/JDpDXNqXp5pPsVN0RhuWkNrBe4Sz26J7yWJcEadopKhQgcB+bFq2PK35iJY6vc6h1PbnXmnwfiOFQl/w==}
+    engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0, npm: '>=10.0.0'}
+    hasBin: true
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -3065,6 +3073,8 @@ snapshots:
   node-releases@2.0.55: {}
 
   nostics@1.2.0: {}
+
+  npm-check-updates@23.1.0: {}
 
   nth-check@2.1.1:
     dependencies:
