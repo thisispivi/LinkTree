@@ -41,6 +41,9 @@ onMounted(async () => {
   top: 1.25rem;
   right: 1.25rem;
   z-index: 100;
-  opacity: 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    opacity: 0;
+  }
 }
 </style>

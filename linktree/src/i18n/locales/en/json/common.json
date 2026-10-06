@@ -28,6 +28,10 @@
     "carsManager": {
       "title": "Cars Manager",
       "description": "Cars Manager is a local-first vehicle companion app for keeping every car organized. It tracks fuel, maintenance, insurance, taxes, repairs, fines, reminders, and ownership costs, with dashboards, analytics, charts, search, and CSV export across a responsive cross-platform Flutter experience."
+    },
+    "boardGamesTracker": {
+      "title": "Board Games Tracker",
+      "description": "A self-hosted board-game collection manager and game-night picker with a wishlist, BoardGameGeek import, game search with artwork, statistics, shareable libraries, and Docker Compose deployment."
     }
   },
   "categories": {

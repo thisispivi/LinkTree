@@ -1,4 +1,5 @@
 import eslint from "@eslint/js";
+import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier";
 import noUnsanitized from "eslint-plugin-no-unsanitized";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
@@ -6,13 +7,12 @@ import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...pluginVue.configs["flat/recommended"],
+  tseslint.configs.recommended,
+  pluginVue.configs["flat/recommended"],
   {
     plugins: {
-      "typescript-eslint": tseslint.plugin,
       nounsanitized: noUnsanitized,
       "simple-import-sort": simpleImportSort,
     },
@@ -39,7 +39,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ["eslint.config.js", "vite.config.*", "*.config.*", "*.cjs"],
+    files: ["*.config.*", "*.cjs"],
     languageOptions: {
       globals: {
         ...globals.node,

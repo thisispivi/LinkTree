@@ -5,7 +5,7 @@ import { qrcode } from "vite-plugin-qrcode";
 import svgLoader from "vite-svg-loader";
 
 export default defineConfig({
-  plugins: [vue(), svgLoader(), qrcode(), svgLoader()],
+  plugins: [vue(), svgLoader(), qrcode()],
   base: "/",
   server: {
     watch: { usePolling: true },
@@ -14,11 +14,6 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [autoprefixer({})],
-    },
-    preprocessorOptions: {
-      scss: {
-        silenceDeprecations: ["legacy-js-api"],
-      },
     },
   },
 });

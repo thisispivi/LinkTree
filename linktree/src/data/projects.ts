@@ -22,19 +22,27 @@ export type Projects = Project[];
 
 export const projects: Project[] = [
   {
-    url: "https://app.syrto.ai/",
-    imageUrl:
-      "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Syrto_small.png",
-    key: "syrto",
-    pillKeys: [CategoryType.WORK],
-  },
-  {
     url: "https://map.pivi.dev/",
     imageUrl:
       "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/TravelMap_small.png",
     key: "travelMap",
     pillKeys: [CategoryType.PROJECTS],
     githubUrl: "https://github.com/thisispivi/TravelMap",
+  },
+  {
+    url: "https://thisispivi.github.io/BoardGamesTracker/",
+    imageUrl:
+      "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/BoardGamesTracker_small.png",
+    key: "boardGamesTracker",
+    pillKeys: [CategoryType.PROJECTS],
+    githubUrl: "https://github.com/thisispivi/BoardGamesTracker",
+  },
+  {
+    url: "https://app.syrto.ai/",
+    imageUrl:
+      "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/Syrto_small.png",
+    key: "syrto",
+    pillKeys: [CategoryType.WORK],
   },
   {
     url: "https://carsmanager.pivi.dev/",

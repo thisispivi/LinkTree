@@ -60,11 +60,11 @@ onMounted(async () => {
     )
     .fromTo(
       contactBtn,
-      { y: 15, opacity: 0, scale: 0.95 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.6 },
+      { y: 15, opacity: 0, scale: 0.95, transition: "none" },
+      { y: 0, opacity: 1, scale: 1, duration: 0.6, clearProps: "transition" },
       "-=0.2"
     )
-    .to(scrollHint, { opacity: 1, duration: 0.8 }, "-=0.1");
+    .to(scrollHint, { opacity: 0.5, duration: 0.8 }, "-=0.1");
 });
 </script>
 

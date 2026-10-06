@@ -47,7 +47,9 @@ const onClick = () => {
   width: 2.75rem;
   height: 2.75rem;
   box-shadow: inset 0 0.0625rem 0 rgba(255, 255, 255, 0.06);
-  @include m.transition(all, 0.3s, ease);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
     background: v.$surface-3;
