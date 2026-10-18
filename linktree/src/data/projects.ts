@@ -34,8 +34,8 @@ export const projects: Project[] = [
     imageUrl:
       "https://pivi-travel-map.b-cdn.net/LinkTree/Projects/BoardGamesTracker_small.png",
     key: "boardGamesTracker",
-    pillKeys: [CategoryType.PROJECTS],
-    githubUrl: "https://github.com/thisispivi/BoardGamesTracker",
+    pillKeys: [CategoryType.PROJECTS, CategoryType.AI_GENERATED],
+    githubUrl: "https://demo.boardgames.pivi.dev/",
   },
   {
     url: "https://app.syrto.ai/",
