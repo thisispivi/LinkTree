@@ -1,7 +1,7 @@
 {
   "name": "linktree",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "linktree.pivi.dev",
   "type": "module",
   "scripts": {
@@ -13,8 +13,6 @@
     "prepare": "cd .. && husky",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "predeploygh": "pnpm run build",
-    "deploygh": "gh-pages -d dist",
     "update:packages": "ncu -u"
   },
   "dependencies": {
@@ -33,7 +31,6 @@
     "eslint-plugin-no-unsanitized": "^4.1.5",
     "eslint-plugin-simple-import-sort": "^14.0.0",
     "eslint-plugin-vue": "^10.11.1",
-    "gh-pages": "^6.3.0",
     "globals": "^17.13.0",
     "husky": "^9.1.7",
     "knip": "^6.40.0",
