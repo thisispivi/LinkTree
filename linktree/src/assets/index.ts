@@ -5,7 +5,7 @@ export { ItalyIcon,UnitedKingdomIcon };
 import ChevronIcon from "./icons/Chevron.svg";
 import GithubIcon from "./icons/Github.svg";
 import InstagramIcon from "./icons/Instagram.svg";
-import LinkedInIcon from "./icons/LinkedIn.svg";
+import LinkedInIcon from "./icons/Linkedin.svg";
 import MailIcon from "./icons/Mail.svg";
 import ResumeIcon from "./icons/Resume.svg";
 import XIcon from "./icons/X.svg";

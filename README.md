@@ -67,7 +67,20 @@ current version.
 
 ## Deployment
 
-```bash
-cd linktree
-pnpm deploygh
-```
+Deployment is automatic: when a new version reaches `main`, the Release
+workflow builds `linktree/` and deploys it to GitHub Pages at
+<https://linktree.pivi.dev/>.
+
+## Versioning and releases
+
+Releases are automatic and follow [Semantic Versioning](https://semver.org/).
+Every pull request that changes code bumps the version in `linktree/package.json`, as
+[AGENTS.md](./AGENTS.md#versioning-and-releases) describes. When CI passes on
+`main`, the Release workflow tags the new version, publishes the
+[GitHub release](https://github.com/thisispivi/LinkTree/releases), and deploys the site to GitHub Pages.
+Dependabot alerts and security updates are on; the `fix-vulnerabilities` skill
+triages them.
+
+## License
+
+[MIT](./LICENSE)

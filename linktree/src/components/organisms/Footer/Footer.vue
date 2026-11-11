@@ -1,8 +1,21 @@
+<script setup lang="ts">
+const VERSION = __APP_VERSION__;
+const REPOSITORY = "https://github.com/thisispivi/LinkTree";
+</script>
+
 <template>
   <footer class="site-footer">
     <div class="site-footer__line"></div>
     <p class="site-footer__text">
-      &copy; {{ new Date().getFullYear() }} Andrea Piras
+      &copy; {{ new Date().getFullYear() }} Andrea Piras ·
+      <a
+        :href="`${REPOSITORY}/releases/tag/v${VERSION}`"
+        target="_blank"
+        rel="noopener"
+        >v{{ VERSION }}</a
+      >
+      ·
+      <a :href="REPOSITORY" target="_blank" rel="noopener">GitHub</a>
     </p>
   </footer>
 </template>
@@ -30,6 +43,12 @@
     font-weight: 500;
     color: v.$on-surface-muted;
     letter-spacing: 0.08em;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
   }
 }
 </style>
