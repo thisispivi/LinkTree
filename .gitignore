@@ -1,5 +1,7 @@
-linktree/vite.config.d.ts
-linktree/vite.config.js
-linktree/.claude/launch.json
+apps/linktree/vite.config.d.ts
+apps/linktree/vite.config.js
+apps/linktree/.claude/launch.json
 .claude/launch.json
 .claude/settings.local.json
+
+node_modules/

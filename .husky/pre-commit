@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-cd "$(dirname "$0")/../linktree"
+cd "$(dirname "$0")/../apps/linktree"
 
 npx tsc --noEmit
-npx lint-staged
+npx lint-staged --max-arg-length 7000

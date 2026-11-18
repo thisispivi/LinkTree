@@ -1,7 +1,7 @@
 {
   "name": "linktree",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "linktree.pivi.dev",
   "type": "module",
   "scripts": {
@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "knip": "knip",
     "knip:fix": "knip --fix",
-    "prepare": "cd .. && husky",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "update:packages": "ncu -u"
@@ -32,7 +31,6 @@
     "eslint-plugin-simple-import-sort": "^14.0.0",
     "eslint-plugin-vue": "^10.12.1",
     "globals": "^17.14.0",
-    "husky": "^9.1.7",
     "knip": "^6.45.1",
     "lint-staged": "^17.6.1",
     "npm-check-updates": "^23.1.1",
@@ -49,6 +47,5 @@
   "lint-staged": {
     "src/**/*.{js,vue,html,css}": "prettier --write",
     "src/**/*.{js,vue}": "eslint --fix"
-  },
-  "packageManager": "pnpm@12.21.0"
+  }
 }
