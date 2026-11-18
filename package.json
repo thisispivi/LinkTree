@@ -1,0 +1,19 @@
+{
+  "name": "linktree-workspace",
+  "private": true,
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "dev": "pnpm --filter linktree dev",
+    "build": "pnpm --filter linktree build",
+    "preview": "pnpm --filter linktree preview",
+    "knip": "pnpm --filter linktree knip",
+    "knip:fix": "pnpm --filter linktree knip:fix",
+    "lint": "pnpm --filter linktree lint",
+    "lint:fix": "pnpm --filter linktree lint:fix",
+    "update:packages": "pnpm --filter linktree update:packages",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

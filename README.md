@@ -42,7 +42,7 @@ pointer, scroll-triggered animations, and English and Italian translations.
 ### Project showcase
 
 - A "Selected Work" section with one card per project defined in
-  `linktree/src/data/projects.ts`.
+  `apps/linktree/src/data/projects.ts`.
 - Each card has an image, a title, a description that expands with More and
   collapses with Less, category pills (Work, Projects, AI Generated), and a
   GitHub button when the project has a repository link.
@@ -65,14 +65,14 @@ Requires Node.js and [pnpm](https://pnpm.io/installation).
 
 ```bash
 git clone https://github.com/thisispivi/LinkTree.git
-cd LinkTree/linktree
+cd LinkTree
 pnpm install
 pnpm dev
 ```
 
 ## Development checks
 
-Run the project checks from the `linktree` directory:
+Run the project checks from the repository root:
 
 ```bash
 pnpm lint
@@ -86,7 +86,7 @@ current version.
 
 ## Deployment
 
-When a new version reaches `main`, the Release workflow builds `linktree/` and
+When a new version reaches `main`, the Release workflow builds `apps/linktree/` and
 deploys it to GitHub Pages at <https://linktree.pivi.dev/>. There is no manual
 deploy step.
 
@@ -94,7 +94,7 @@ deploy step.
 
 Releases are automatic and follow [Semantic Versioning](https://semver.org/).
 Every pull request that changes code bumps the version in
-`linktree/package.json`, as
+`apps/linktree/package.json`, as
 [AGENTS.md](./AGENTS.md#versioning-and-releases) describes. When CI passes on
 `main`, the Release workflow tags the new version, publishes the
 [GitHub release](https://github.com/thisispivi/LinkTree/releases), and deploys
@@ -112,16 +112,17 @@ the site to GitHub Pages. Dependabot alerts and security updates are on; the
 
 ```text
 .
-├── logos/              # Brand assets
-├── resume/             # Resume PDFs (EN, IT) linked from the page
-└── linktree/           # Vue 3 app
-    └── src/
-        ├── assets/     # SVG icons and flag images
-        ├── components/ # Atomic design (atoms → molecules → organisms → templates → pages)
-        ├── data/       # Project data definitions
-        ├── i18n/       # Locale files (en, it)
-        ├── router/     # Vue Router config
-        └── styles/     # SCSS variables, mixins, global styles
+├── apps/
+│   └── linktree/           # Vue 3 app
+│       └── src/
+│           ├── assets/     # SVG icons and flag images
+│           ├── components/ # Atomic design (atoms → molecules → organisms → templates → pages)
+│           ├── data/       # Project data definitions
+│           ├── i18n/       # Locale files (en, it)
+│           ├── router/     # Vue Router config
+│           └── styles/     # SCSS variables, mixins, global styles
+├── logos/                  # Brand assets
+└── resume/                 # Resume PDFs (EN, IT) linked from the page
 ```
 
 ## License

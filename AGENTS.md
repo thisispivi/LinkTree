@@ -10,15 +10,15 @@ copy rules into them.
 
 ## Repository layout
 
-- `linktree/` is the Vue 3 app. Run every `pnpm` command there.
-- `linktree/src/components/` follows Atomic Design: `atoms`, `molecules`,
+- `apps/linktree/` is the Vue 3 app. Run `pnpm` commands from the repository root.
+- `apps/linktree/src/components/` follows Atomic Design: `atoms`, `molecules`,
   `organisms`, `templates`, `pages`.
-- `linktree/src/data/` holds the links and projects shown on the page.
+- `apps/linktree/src/data/` holds the links and projects shown on the page.
 - `logos/` holds brand source files; `resume/` the PDFs linked from the page.
 
 ## Required verification
 
-From `linktree/`, every change must pass:
+From the repository root, every change must pass:
 
 ```bash
 pnpm lint && pnpm knip && pnpm build && pnpm audit --audit-level=moderate
@@ -26,7 +26,7 @@ pnpm lint && pnpm knip && pnpm build && pnpm audit --audit-level=moderate
 
 ## Versioning and releases
 
-`linktree/package.json` holds the version, and it is what triggers a release. When
+`apps/linktree/package.json` holds the version, and it is what triggers a release. When
 CI passes on `main` and that version has no tag yet, the Release workflow tags
 it, publishes the GitHub release with generated notes, and deploys the site to GitHub Pages at <https://linktree.pivi.dev/>. Nobody
 releases by hand, and nothing is committed back to `main`.
