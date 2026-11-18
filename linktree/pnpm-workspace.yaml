@@ -1,19 +1,21 @@
-minimumReleaseAgeExclude:
-  - brace-expansion@5.0.12
-  - brace-expansion@5.0.11
-  - brace-expansion@5.0.10
-  - smol-toml@1.8.1
-  - source-map-js@1.2.2
-  - postcss-selector-parser@7.1.6
-  - knip@6.40.0
-  - vite@8.3.3
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-auditConfig:
-  ignoreGhsas:
-    - GHSA-vfj7-8cjw-p6xm
+# Supply chain: only install versions published at least a day ago, refuse
+# git/tarball sub-dependencies, and refuse versions with weaker provenance than
+# an earlier one. A day, not longer, so Dependabot security fixes (opened as
+# soon as a fix ships) pass CI on the next run. Dependabot's own version
+# updates wait three days (cooldown in .github/dependabot.yml).
+minimumReleaseAge: 1440
+blockExoticSubdeps: true
+trustPolicy: no-downgrade
+
+# Packages whose install scripts may run (true) or are skipped (false).
 allowBuilds:
   "@parcel/watcher": false
-overrides:
-  "minimatch@>=7 <11.0.1": 11.0.1
+  "esbuild": true
+
+auditConfig:
+  ignoreGhsas:
+    # picomatch ReDoS on repeated extglobs: every release up to 4.0.7 is affected
+    # and no fix exists yet. It is reached only through build and lint tooling
+    # that matches glob patterns this repository writes itself. Drop this entry
+    # once picomatch publishes a patched release.
+    - GHSA-fc5q-39xc-vjpf
